@@ -27,6 +27,9 @@ Clone Project
 
 Go to the project directory
 
+## Live Preview
+https://loquacious-syrniki-d6e13d.netlify.app/
+
   
 ## Feedback
 
