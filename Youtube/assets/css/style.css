@@ -41,7 +41,7 @@ body {
 }
 
 
-body.scroll{
+body.scroll {
     overflow: hidden;
 }
 
@@ -313,20 +313,35 @@ body.light,
 
 #main .card-container::-webkit-scrollbar-track {
     height: 4px;
-    background-color: #0f0f0f; /* Scrollbar arka plan rengi */
+    background-color: #0f0f0f;
+    /* Scrollbar arka plan rengi */
 }
 
 #main .card-container::-webkit-scrollbar-thumb {
-    background-color: #0f0f0f; /* Scrollbar dolgu rengi */
+    background-color: #0f0f0f;
+    /* Scrollbar dolgu rengi */
 }
 
 body.light #main .card-container::-webkit-scrollbar-track {
     height: 4px;
-    background-color: #fefefe; /* Scrollbar arka plan rengi */
+    background-color: #fefefe;
+    /* Scrollbar arka plan rengi */
 }
 
 body.light #main .card-container::-webkit-scrollbar-thumb {
-    background-color: #fefefe; /* Scrollbar dolgu rengi */
+    background-color: #fefefe;
+    /* Scrollbar dolgu rengi */
+}
+
+body.light::-webkit-scrollbar-track,
+body.light #side-bar::-webkit-scrollbar-track {
+    width: 8px;
+    background-color: #fefefe;
+}
+
+body.light::-webkit-scrollbar-thumb,
+body.light #side-bar::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa
 }
 
 
@@ -459,12 +474,12 @@ body.light #main .card-container::-webkit-scrollbar-thumb {
     padding: 6px 36px 6px 0px;
 }
 
-.close{
+.close {
     color: #fefefe;
     display: none;
 }
 
-.profile .right{
+.profile .right {
     display: flex;
 }
 
@@ -575,7 +590,7 @@ body.light #main .card-container::-webkit-scrollbar-thumb {
         margin-left: -20px;
     }
 
-    #nav-bar{
+    #nav-bar {
         padding: 0px 20px;
     }
 
@@ -621,7 +636,8 @@ body.light #main .card-container::-webkit-scrollbar-thumb {
         margin: 70px 0px;
     }
 
-    .profile, .theme {
+    .profile,
+    .theme {
         max-width: 100vw;
         width: 100%;
         left: 0;
@@ -629,15 +645,15 @@ body.light #main .card-container::-webkit-scrollbar-thumb {
         border-radius: 0;
     }
 
-    .theme{
+    .theme {
         height: 100vh;
     }
 
-    .close{
+    .close {
         display: flex;
     }
 
-    .profile .right{
+    .profile .right {
         justify-content: space-between;
         width: 100%;
     }
@@ -646,7 +662,7 @@ body.light #main .card-container::-webkit-scrollbar-thumb {
         padding: 0;
     }
 
-    #nav-bar{
+    #nav-bar {
         padding: 0px 12px;
     }
 
