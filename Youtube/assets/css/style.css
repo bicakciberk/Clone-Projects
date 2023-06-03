@@ -1,0 +1,653 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #aaaaaa #0f0f0f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0f0f0f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+}
+
+:root {
+    --primary-color: #0f0f0f;
+    --secondary-color: #fefefe;
+    --profile-color: #282828;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+}
+
+
+body.scroll{
+    overflow: hidden;
+}
+
+/*change theme*/
+
+body.light,
+#nav-bar.light,
+#side-bar.light,
+.profile.light,
+.theme.light,
+.yt-mic.light,
+#nav-search.light {
+    background-color: var(--secondary-color);
+
+}
+
+.yt-text.light,
+#side-bar.light li svg,
+#nav-bar.light .right svg,
+.profile.light section svg,
+.theme.light .yt-icon {
+    fill: var(--primary-color);
+}
+
+.menu.light,
+#nav-search.light,
+.yt-mic.light .mic,
+#side-bar.light a,
+#main.light .card-container,
+.video-container.light h3,
+.profile.light,
+#side-bar.light h3,
+.theme.light {
+    color: var(--primary-color);
+}
+
+#nav-search.light {
+    border: 1px solid #aaaaaa;
+}
+
+#main.light .card-container .card,
+#nav-bar.light .svg-card:hover,
+.profile.light .card:hover,
+.theme.light .card:hover,
+#side-bar.light li:hover {
+    background-color: #f2f2f2;
+}
+
+.video-container.light p {
+    color: #606060;
+}
+
+
+
+/*nav-bar*/
+
+/*logo*/
+
+#youtube-logo {
+    width: 120px;
+    height: 56px;
+    padding: 18px 14px 18px 16px;
+}
+
+.yt-text {
+    fill: var(--secondary-color);
+}
+
+.menu {
+    color: var(--secondary-color);
+    cursor: pointer;
+    z-index: 99;
+}
+
+/*bar*/
+#nav-bar .left {
+    display: flex;
+    align-items: center;
+}
+
+#nav-bar {
+    padding: 0px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--primary-color);
+    z-index: 9999;
+}
+
+#nav-search {
+    padding: 10px 20px;
+    width: 100%;
+    /* max-width: 604px; */
+    border: 1px solid #222222;
+    border-radius: 20px;
+    background-color: #121212;
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+#nav-bar form {
+    display: flex;
+    align-items: center;
+    width: 605px;
+}
+
+.yt-mic .mic {
+    font-size: 23px;
+    color: var(--secondary-color);
+}
+
+.yt-mic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#nav-bar .right svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary-color);
+    cursor: pointer;
+}
+
+#nav-bar .right {
+    display: flex;
+    align-items: center;
+}
+
+#nav-bar .right img {
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 18px;
+}
+
+#nav-bar .svg-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+#nav-bar .svg-card:hover {
+    background-color: #272727;
+}
+
+#country-code {
+    color: #aaaaaa;
+    margin-left: -10px;
+    margin-top: 13px;
+    font-size: 10px;
+}
+
+.yt {
+    display: flex;
+}
+
+/*side-bar*/
+#side-bar {
+    position: fixed;
+    left: 0;
+    top: 56px;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 9999;
+    padding: 0px 20px 70px;
+    max-width: 216px;
+    overflow: hidden;
+}
+
+#side-bar:hover {
+    overflow-y: scroll;
+}
+
+#side-bar ul {
+    border-bottom: 1px solid #272727;
+    padding: 20px 0px;
+}
+
+#side-bar a {
+    color: var(--secondary-color);
+    font-size: 14px;
+    /* margin-left: 20px; */
+}
+
+#side-bar h3 {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0px 0px 10px 8px;
+}
+
+#side-bar li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+#side-bar li svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary-color);
+    margin: 0px 24px 0px 0px;
+}
+
+#side-bar li:hover {
+    background-color: #272727;
+    border-radius: 12px;
+}
+
+#side-bar img {
+    border-radius: 50%;
+    margin: 0px 24px 0px 0px;
+}
+
+.side-text.hide {
+    display: none;
+}
+
+.side-links.hidden {
+    display: none;
+}
+
+#side-bar.width {
+    max-width: 104px;
+}
+
+#side-bar.width svg {
+    margin: 5px;
+}
+
+#side-bar.active {
+    display: block;
+}
+
+#side-bar.active .side-links.media {
+    display: block;
+}
+
+/*main*/
+#main {
+    padding: 0px 28px 28px;
+    margin-top: 60px;
+    margin-left: 216px;
+}
+
+#main.width {
+    margin-left: 74px;
+}
+
+#main .card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#main .card-container::-webkit-scrollbar-track {
+    height: 4px;
+    background-color: #0f0f0f; /* Scrollbar arka plan rengi */
+}
+
+#main .card-container::-webkit-scrollbar-thumb {
+    background-color: #0f0f0f; /* Scrollbar dolgu rengi */
+}
+
+body.light #main .card-container::-webkit-scrollbar-track {
+    height: 4px;
+    background-color: #fefefe; /* Scrollbar arka plan rengi */
+}
+
+body.light #main .card-container::-webkit-scrollbar-thumb {
+    background-color: #fefefe; /* Scrollbar dolgu rengi */
+}
+
+
+
+
+#main .card-container .card {
+    background-color: #272727;
+    border-radius: 12px;
+    padding: 8px 12px;
+    height: 30px;
+    margin: 5px 12px 0px 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#main .card-container .card:active {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/*video container*/
+.video-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 20px;
+    margin: 0px 16px;
+    justify-content: center;
+}
+
+.video-container p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 5px 0px;
+}
+
+.video-container h3 {
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+.video-banner {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+}
+
+.channel-logo {
+    border-radius: 50%;
+}
+
+.video-container .bottom {
+    display: flex;
+    align-items: start;
+    margin-top: 15px;
+}
+
+.video {
+    margin-top: 10px;
+}
+
+.video-container .header {
+    margin: 0px 24px 0px 12px;
+}
+
+/*profile*/
+.profile {
+    background-color: var(--profile-color);
+    color: var(--secondary-color);
+    font-size: 14px;
+    border-radius: 12px;
+    max-width: 300px;
+    top: 10px;
+    position: fixed;
+    right: 70px;
+    display: none;
+    z-index: 9999;
+}
+
+.profile.active {
+    display: block;
+}
+
+.profile section svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary-color);
+    margin-left: 16px;
+}
+
+.profile .card {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile .card:hover {
+    background-color: #3e3e3e;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.profile .top {
+    display: flex;
+    align-items: start;
+    border: none;
+    font-size: 16px;
+    padding: 16px;
+}
+
+.profile .top p {
+    margin: 5px 20px;
+}
+
+.profile .top a {
+    color: #3ea6ff;
+}
+
+.profile section {
+    padding: 8px 0px;
+    border-top: 1px solid #535353;
+}
+
+.profile section p {
+    margin: 0px 20px;
+}
+
+.profile section .card {
+    padding: 6px 36px 6px 0px;
+}
+
+.close{
+    color: #fefefe;
+    display: none;
+}
+
+.profile .right{
+    display: flex;
+}
+
+.account-manage {
+    /*Google Hesabınızı Yönetin Linki*/
+    margin: 10px 20px;
+    font-size: 14px;
+}
+
+.theme {
+    background-color: var(--profile-color);
+    color: var(--secondary-color);
+    font-size: 14px;
+    border-radius: 12px;
+    max-width: 300px;
+    position: fixed;
+    top: 13px;
+    right: 70px;
+    display: none;
+    z-index: 9999;
+}
+
+.theme.active {
+    display: block;
+}
+
+.theme-header {
+    border-bottom: 1px solid #3e3e3e;
+    font-size: 16px;
+    padding: 16px 36px 16px 16px;
+    display: flex;
+    cursor: pointer;
+}
+
+.theme-header p {
+    margin-left: 30px;
+}
+
+.theme .card h3 {
+    font-weight: 100;
+    padding: 0px 20px;
+}
+
+.theme .card:hover {
+    background-color: #535353;
+}
+
+.theme .card {
+    padding: 8px 36px 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: start;
+}
+
+.theme .card svg {
+    opacity: 0;
+}
+
+.theme .card.active svg {
+    opacity: 1;
+}
+
+
+@media screen and (max-width:2268px) {
+    .video-container {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+
+@media screen and (max-width:1940px) {
+    .video-container {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media screen and (max-width:1605px) {
+    .video-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+
+@media screen and (max-width: 1127px) {
+
+    .side-links.media,
+    .side-links a {
+        display: none;
+    }
+
+    #side-bar ul li svg {
+        margin: 5px;
+    }
+
+    #main {
+        margin-left: 74px;
+        padding: 0px 20px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #youtube-logo {
+        padding: 18px 14px 18px 0px;
+    }
+
+    #country-code {
+        margin-left: -20px;
+    }
+
+    #nav-bar{
+        padding: 0px 20px;
+    }
+
+}
+
+@media screen and (max-width:1075px) {
+    .video-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+
+@media screen and (max-width: 596px) {
+    #nav-bar form {
+        display: none;
+    }
+
+    #nav-bar .svg-card {
+        margin-left: 3px;
+    }
+
+    #nav-bar .right img {
+        margin-left: 11px;
+    }
+
+    #main .card-container {
+        padding: 0px 12px;
+    }
+
+
+}
+
+@media screen and (max-width:581px) {
+    #side-bar {
+        display: none;
+    }
+
+    .video-container {
+        grid-template-columns: auto;
+    }
+
+    #main {
+        margin: 70px 0px;
+    }
+
+    .profile, .theme {
+        max-width: 100vw;
+        width: 100%;
+        left: 0;
+        top: 0px;
+        border-radius: 0;
+    }
+
+    .theme{
+        height: 100vh;
+    }
+
+    .close{
+        display: flex;
+    }
+
+    .profile .right{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #main {
+        padding: 0;
+    }
+
+    #nav-bar{
+        padding: 0px 12px;
+    }
+
+}
