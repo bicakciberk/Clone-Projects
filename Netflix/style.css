@@ -1,0 +1,13 @@
+.search.active #navSearch{
+    margin-left: 30px;
+    width: 200px;
+    transition: 0.5s;
+    padding: 0px 10px;
+}
+.search.active{
+    border: 1px solid #fefefe;
+}
+.account:hover i{
+    rotate: 180deg;
+    transition: 0.5s;
+}
