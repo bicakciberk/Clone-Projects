@@ -13,13 +13,13 @@ searchAnimation()
 function showAccount() {
     const account = document.querySelector('#account')
     const accountOpen = document.querySelector('#account-open')
-    const heroSection = document.querySelector('#hero-section')
+    const main = document.querySelector('main')
 
     account.addEventListener('mouseover', function () {
         accountOpen.classList.add('show')
     })
 
-    heroSection.addEventListener('mouseover', function () {
+    main.addEventListener('mouseover', function () {
         accountOpen.classList.remove('show')
     })
 }
