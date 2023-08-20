@@ -1,13 +1,50 @@
+
 .search.active #navSearch{
     margin-left: 30px;
     width: 200px;
     transition: 0.5s;
     padding: 0px 10px;
+    background-color: #080808;
+    opacity: 0.75;
 }
 .search.active{
     border: 1px solid #fefefe;
+    background-color: #080808;
+    opacity: 0.75;
+
 }
 .account:hover i{
     rotate: 180deg;
     transition: 0.5s;
+}
+#account-open.show,
+#browseOpen.show
+{
+    display: flex;
+}
+#hero-section{
+    height:calc(100vh - 70px);
+}
+.img-card:hover .caret{
+    display: flex;
+}
+
+/*burası*/
+.card .imgs img.x1{
+    transform: translateX(-500px);
+    transition: 0.6s;
+}
+.card .imgs img.x2{
+    transform: translateX(-1000px);
+    transition: 0.6s;
+}
+
+
+@media screen and (max-width:950px){
+    #hero-section{
+        height: 100%; 
+    }
+    #hero-section .container{
+        height: calc(100% - 70px);
+    }
 }
