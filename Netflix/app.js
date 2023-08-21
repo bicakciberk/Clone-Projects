@@ -16,7 +16,11 @@ function showAccount() {
     const main = document.querySelector('main')
 
     account.addEventListener('mouseover', function () {
-        accountOpen.classList.add('show')
+        if(accountOpen.classList.contains('show')){
+            accountOpen.classList.remove('show')
+        } else{
+            accountOpen.classList.add('show')
+        }
     })
 
     main.addEventListener('mouseover', function () {
@@ -106,19 +110,61 @@ window.addEventListener('load', navBar)
 
 function caret() {
     const caretRight = document.querySelectorAll('.caret-right')
-    caretRight.forEach((caretRight)=>{
-        caretRight.addEventListener('click',function(){
-            caretRight.parentElement.querySelectorAll('img').forEach((img)=>{
-                img.classList.add('active')
-                if(img.classList.contains('active')){
-                    img.classList.add('x1')
-                }else if(img.classList.contains('x1')){
-                    img.classList.add('x2')
+    const caretLeft = document.querySelectorAll('.caret-left')
+
+    caretRight.forEach((caretRight) => {
+        let value = 0;
+        let i = 0;
+
+        caretRight.addEventListener('click', function () {
+            value = value + 1000;
+            i = i + 1;
+            console.log(value)
+            console.log(i)
+
+            caretRight.parentElement.querySelectorAll('img').forEach((img) => {
+                img.style.transform = `translateX(-${value}px)`
+                img.style.transitionDuration = '0.6s'
+
+                if (i === 3) {
+                    img.style.transform = `translateX(0px)`;
+                    value = 0;
                 }
+
             })
+            if (i === 3) {
+                i = 0;
+                console.log(i)
+            }
+        })
+    })
+
+    caretLeft.forEach((caretLeft) => {
+        let value = 0;
+        let i = 0;
+
+        caretLeft.addEventListener('click', function () {
+            value = value + 1000;
+            i = i - 1;
+            console.log(value)
+            console.log(i)
+
+            caretLeft.parentElement.querySelectorAll('img').forEach((img) => {
+                img.style.transform = `translateX(+${value}px)`
+                img.style.transitionDuration = '0.6s'
+
+                if (i === -1) {
+                    img.style.transform = `translateX(0px)`;
+                    value = 0;
+                }
+
+            })
+            if (i === -1) {
+                i = 0;
+                console.log(i)
+            }
         })
     })
 }
 
 caret()
-

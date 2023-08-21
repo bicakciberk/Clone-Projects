@@ -1,4 +1,6 @@
-
+body{
+    overflow-x: hidden;
+}
 .search.active #navSearch{
     margin-left: 30px;
     width: 200px;
@@ -21,30 +23,27 @@
 #browseOpen.show
 {
     display: flex;
+    z-index: 9999;
 }
 #hero-section{
     height:calc(100vh - 70px);
 }
-.img-card:hover .caret{
+.img-card:hover .caret-left,
+.img-card:hover .caret-right
+{
     display: flex;
 }
-
-/*burası*/
-.card .imgs img.x1{
-    transform: translateX(-500px);
-    transition: 0.6s;
-}
-.card .imgs img.x2{
-    transform: translateX(-1000px);
-    transition: 0.6s;
-}
-
-
 @media screen and (max-width:950px){
     #hero-section{
         height: 100%; 
     }
     #hero-section .container{
         height: calc(100% - 70px);
+    }
+
+    .img-card:hover .caret-left,
+    .img-card:hover .caret-right
+    {
+        display: none;
     }
 }

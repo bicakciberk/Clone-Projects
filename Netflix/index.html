@@ -21,9 +21,8 @@
         id="nav-bar">
         <div class="left flex items-center">
             <img src="public/Netflix_Logo_PMS.png" height="29.6px" width="92.5px" class="635px:w-60px h-auto">
-            <ul id="browseOpen"
-                class="flex text-sm text-navText mx-50px 1210px:text-xs 1210px:mx-24px 950px:hidden 950px:flex-col 950px:absolute 950px:top-70px 950px:opacity-90 950px:items-center 950px:left-60px 950px:bg-bodyBg">
-                <li class="mx-7px hover:text-navHoverText duration-500 375px:mx-3px 950px:py-10px 950px:px-50px">
+            <ul id="browseOpen" class="flex text-sm text-navText mx-50px 1210px:text-xs 1210px:mx-24px 950px:hidden 950px:flex-col 950px:z-100 950px:fixed 950px:top-70px 950px:opacity-90 950px:items-center 950px:left-60px 950px:bg-bodyBg">
+                <li class="mx-7px hover:text-navHoverText duration-500 375px:mx-3px 950px:py-10px 950px:px-50px 950px:z-100">
                     <a class="focus:text-white" href="#">Ana Sayfa</a>
                 </li>
                 <li class="mx-7px hover:text-navHoverText duration-500 950px:py-10px">
@@ -70,7 +69,7 @@
             </div>
         </div>
     </nav>
-    <div class="account-open hidden flex-col p-10px bg-bodyBg w-220px text-sm text-white fixed right-50px 1210px:text-xs top-70px z-20 rounded-md opacity-90 1100px:right-24px 375px:right-15px"
+    <div class="account-open z-100 hidden flex-col p-10px bg-bodyBg w-220px text-sm text-white fixed right-50px 1210px:text-xs top-70px z-20 rounded-md opacity-90 1100px:right-24px 375px:right-15px"
         id="account-open">
         <div class="card flex items-center cursor-pointer">
             <img src="public/pp.png" class="rounded-md">
@@ -173,27 +172,40 @@
             </div>
         </section>
 
-        <div class="container mt-140px mb-70px px-50px 1100px:px-24px 375px:px-15px">
-            <div class="card mb-40px">
-                <p class="text-white my-10px text-lg font-medium">Berk, izlemeye devam et</p>
+        <div
+            class="container mb-40px px-50px 1100px:px-24px 375px:px-15px overflow-x-hidden 950px:mt-30px 950px:mb-0px">
+            <div class="card mb-40px 950px:overflow-x-auto z-50">
+                <div class="header flex">
+                    <p class="text-white my-10px text-lg font-medium 950px:text-base z-50">Berk, izlemeye devam et</p>
+                </div>
                 <div class="imgs flex items-center">
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABX4EnnG4i21OHeJGX-ksaGYglpmwy6IGT5hlrw0s0P4e8hvQbCOwqlcf2SqJVCmgPX8a7fGFfNyR0C_qGq0CiVFObGxcju1pCEykn7EfSXeDfW6DPkYQ5ELq9UFIgOIIDJg0.jpg?r=5bf"
-                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mr-5px">
+                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mr-5px z-50">
 
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQiAZh-kUsfhvTz-LUZFyZ9bWEP7LAE7VN7KtRRH3ImZa0ocYqzJzPRgjpGRQTyz1-_sOUTjOWRDskhLjhCzwGieYfAABZZuTjonnoEVcHCPag3on-jB-cUPNnCxDUPQK8D2.jpg?r=400"
-                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px">
+                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px z-50">
 
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVKeHBygQDID8k3hsFPzRHdXTFaw59nrXYEBRMQDj8LL5j4ChDAcmH3Y8tLksRVh0TmrOwmX62XnpJq8kTu9ehJl8bm-3PDwsGA.webp?r=6d6"
-                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px">
+                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px z-50">
 
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRL8jC1hF426Vlatt6KZ1Jtc-87xlktfB-mEbXZIkiG67jyMETzkUhA8WlVsseEFG5hzl-4ETbb6WW6XusU3AGsVhSvX2fnQEhTrZtQhyWra4kOsUgz7vtipaKzKxF56iYX0R1EF-x-sigbfdOyxo9wW4gzIIQzNPrjq_qM3kQrrudrHW6-aGandx31LgRkANUP63_eR86AHkFcG0pMWlmM2L2T-zAEKZhkpYUl-mbVW_hdwZVZVFh5sg6_XX1Xoij59iwTe3vyzqWFJcprwsOCiG1m97gXy8RYkX_PFg3zNdrj3vA-dUfYRHXDdPs-uVQRyQs9b8UH3a1dFNSGNqwzRzOBV5EBH6Nl9pRgjj2-ufcnPZvE-.jpg?r=bb3"
-                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px">
+                        class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px z-50">
 
                 </div>
             </div>
+
             <div class="card img-card my-40px">
-                <p class="text-white my-10px text-lg font-medium">Netflix'te popüler</p>
-                <div class="imgs flex items-center relative">
+                <div class="header">
+                    <p class="text-white my-10px text-lg font-medium 950px:text-base">Netflix'te popüler</p>
+
+                </div>
+                <div class="imgs flex items-center relative 950px:overflow-x-auto">
+                    <div
+                        class="caret caret-left absolute left-0px bg-bodyBg opacity-75 p-5px duration-500 hidden z-50">
+                        <span class="material-symbols-outlined text-9xl text-white z-50 cursor-pointer">
+                            chevron_left
+                        </span>
+                    </div>
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABT4D2YbhEh3QepczupHbskqpNxxBxZkV83WmVToskRvQaeRtPdmWVWp6eIBmZncGAlVr3MF9sVLchQXx4WtYdx7IjOKDyTn-NbYmVA5qCDYWO9Js8mWavlXeybJnzKGgrNZM.jpg?r=acb"
                         class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mr-5px">
 
@@ -233,17 +245,25 @@
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUwPC8Yv-z0Ocm_AXQHQV9KppsoJJESV78RWmzj1tzC9qJpF3FrZe9KTLQ7nU3PsaVEQpUvijFWeCJlSLZS5GxGFVtS26qEY1xGciIM4ubJ3UMGQ0aMAgQ_8Q1Hf1NOApeAR.jpg?r=578"
                         class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px">
 
-                    <div class="caret caret-right absolute right-0px bg-bodyBg opacity-75 p-5px duration-500 hidden">
+                    <div
+                        class="caret caret-right absolute right-0px bg-bodyBg opacity-75 p-5px duration-500 hidden 950px:hidden">
                         <span class="material-symbols-outlined text-9xl text-white z-50 cursor-pointer">
                             chevron_right
                         </span>
                     </div>
                 </div>
-               
+
             </div>
+
             <div class="card img-card my-40px">
-                <p class="text-white my-10px text-lg font-medium">Netflix'te popüler</p>
-                <div class="imgs flex items-center relative">
+                <p class="text-white my-10px text-lg font-medium 950px:text-base">Netflix'te popüler</p>
+                <div class="imgs flex items-center relative 950px:overflow-x-auto">
+                    <div
+                        class="caret caret-left absolute left-0px bg-bodyBg opacity-75 p-5px duration-500 hidden z-50 950px:hidden">
+                        <span class="material-symbols-outlined text-9xl text-white z-50 cursor-pointer">
+                            chevron_left
+                        </span>
+                    </div>
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABT4D2YbhEh3QepczupHbskqpNxxBxZkV83WmVToskRvQaeRtPdmWVWp6eIBmZncGAlVr3MF9sVLchQXx4WtYdx7IjOKDyTn-NbYmVA5qCDYWO9Js8mWavlXeybJnzKGgrNZM.jpg?r=acb"
                         class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mr-5px">
 
@@ -283,13 +303,14 @@
                     <img src="https://occ-0-7332-1490.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUwPC8Yv-z0Ocm_AXQHQV9KppsoJJESV78RWmzj1tzC9qJpF3FrZe9KTLQ7nU3PsaVEQpUvijFWeCJlSLZS5GxGFVtS26qEY1xGciIM4ubJ3UMGQ0aMAgQ_8Q1Hf1NOApeAR.jpg?r=578"
                         class="object-cover rounded-md max-w-230px w-7/12 cursor-pointer mx-5px">
 
-                    <div class="caret caret-right absolute right-0px bg-bodyBg opacity-75 p-5px duration-500 hidden">
+                    <div
+                        class="caret caret-right absolute right-0px bg-bodyBg opacity-75 p-5px duration-500 hidden 950px:hidden">
                         <span class="material-symbols-outlined text-9xl text-white z-50 cursor-pointer">
                             chevron_right
                         </span>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </main>
