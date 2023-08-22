@@ -93,7 +93,7 @@ function volume() {
 
 
 }
-volume()
+window.addEventListener('load',volume)
 
 function navBar() {
     const nav = document.querySelector('#nav-bar')

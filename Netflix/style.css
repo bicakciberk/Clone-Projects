@@ -1,7 +1,8 @@
-body{
+body {
     overflow-x: hidden;
 }
-.search.active #navSearch{
+
+.search.active #navSearch {
     margin-left: 30px;
     width: 200px;
     transition: 0.5s;
@@ -9,41 +10,62 @@ body{
     background-color: #080808;
     opacity: 0.75;
 }
-.search.active{
+
+.search.active {
     border: 1px solid #fefefe;
     background-color: #080808;
     opacity: 0.75;
-
 }
-.account:hover i{
+
+.account:hover i {
     rotate: 180deg;
     transition: 0.5s;
 }
+
 #account-open.show,
-#browseOpen.show
-{
+#browseOpen.show {
     display: flex;
     z-index: 9999;
 }
-#hero-section{
-    height:calc(100vh - 70px);
+
+#hero-section {
+    height: calc(100vh - 70px);
 }
+
 .img-card:hover .caret-left,
-.img-card:hover .caret-right
-{
+.img-card:hover .caret-right {
     display: flex;
 }
-@media screen and (max-width:950px){
-    #hero-section{
-        height: 100%; 
+
+#otuz {
+    margin-top: -10px;
+}
+
+#transparent {
+    margin-top: -10px;
+    background-color: transparent;
+    background-image: linear-gradient(to top,#080808, transparent);
+    background-position: 0 top;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    bottom: -70px;
+    opacity: 1;
+    top: auto;
+    width: 100%;
+    height: 268px;
+}
+
+@media screen and (max-width:950px) {
+    #hero-section {
+        height: 100%;
     }
-    #hero-section .container{
+
+    #hero-section .container {
         height: calc(100% - 70px);
     }
 
     .img-card:hover .caret-left,
-    .img-card:hover .caret-right
-    {
+    .img-card:hover .caret-right {
         display: none;
     }
 }

@@ -122,10 +122,15 @@
 
     <main>
         <section class="hero relative" id="hero-section">
-            <img class="w-screen h-screen object-cover 950px:h-auto" src="public/extractionwallpaper.jpg" id="hero-img">
-            <video class="w-screen h-screen object-cover hidden 950px:h-auto" id="hero-video">
-                <source src="public/herovideohd.mp4">
-            </video>
+            <div class="overlay bg-overlay">
+                <img class="w-screen h-screen object-cover 950px:h-auto opacity-75" src="public/extractionwallpaper.jpg" id="hero-img">
+            </div>
+            <div class="overlay bg-overlay">
+                <video class="w-screen h-screen object-cover opacity-75 hidden 950px:h-auto" id="hero-video">
+                    <source src="public/herovideohd.mp4">
+                </video>
+            </div>
+            <div id="transparent" class="h-70px w-full absolute"></div>
             <div class="container absolute top-70px flex justify-between items-center h-full px-50px 1100px:px-24px 
             950px:h-auto 375px:px-15px">
                 <div class="flex flex-col">
@@ -171,10 +176,9 @@
                 </div>
             </div>
         </section>
-
         <div
-            class="container mb-40px px-50px 1100px:px-24px 375px:px-15px overflow-x-hidden 950px:mt-30px 950px:mb-0px">
-            <div class="card mb-40px 950px:overflow-x-auto z-50">
+            class="container px-50px 1100px:px-24px 375px:px-15px overflow-x-hidden 950px:mt-30px 950px:mb-0px">
+            <div id="otuz" class="card mb-40px 950px:overflow-x-auto z-50">
                 <div class="header flex">
                     <p class="text-white my-10px text-lg font-medium 950px:text-base z-50">Berk, izlemeye devam et</p>
                 </div>
@@ -325,7 +329,8 @@
                         bodyBg: '#080808',
                         gray: '#b3b3b3',
                         whiteGray: '#565254',
-                        hoverGray1: '#c2c1c3'
+                        hoverGray1: '#c2c1c3',
+                        overlay: '#444'
                     },
                     maxWidth: {
                         '190px': '190px',
