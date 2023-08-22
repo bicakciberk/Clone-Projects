@@ -21,8 +21,10 @@
         id="nav-bar">
         <div class="left flex items-center">
             <img src="public/Netflix_Logo_PMS.png" height="29.6px" width="92.5px" class="635px:w-60px h-auto">
-            <ul id="browseOpen" class="flex text-sm text-navText mx-50px 1210px:text-xs 1210px:mx-24px 950px:hidden 950px:flex-col 950px:z-100 950px:fixed 950px:top-70px 950px:opacity-90 950px:items-center 950px:left-60px 950px:bg-bodyBg">
-                <li class="mx-7px hover:text-navHoverText duration-500 375px:mx-3px 950px:py-10px 950px:px-50px 950px:z-100">
+            <ul id="browseOpen"
+                class="flex text-sm text-navText mx-50px 1210px:text-xs 1210px:mx-24px 950px:hidden 950px:flex-col 950px:z-100 950px:fixed 950px:top-70px 950px:opacity-90 950px:items-center 950px:left-60px 950px:bg-bodyBg">
+                <li
+                    class="mx-7px hover:text-navHoverText duration-500 375px:mx-3px 950px:py-10px 950px:px-50px 950px:z-100">
                     <a class="focus:text-white" href="#">Ana Sayfa</a>
                 </li>
                 <li class="mx-7px hover:text-navHoverText duration-500 950px:py-10px">
@@ -123,14 +125,16 @@
     <main>
         <section class="hero relative" id="hero-section">
             <div class="overlay bg-overlay">
-                <img class="w-screen h-screen object-cover 950px:h-auto opacity-75" src="public/extractionwallpaper.jpg" id="hero-img">
+                <img class="w-screen h-screen object-cover 950px:h-auto opacity-75" src="public/extractionwallpaper.jpg"
+                    id="hero-img">
             </div>
             <div class="overlay bg-overlay">
                 <video class="w-screen h-screen object-cover opacity-75 hidden 950px:h-auto" id="hero-video">
                     <source src="public/herovideohd.mp4">
                 </video>
             </div>
-            <div id="transparent" class="h-70px w-full absolute"></div>
+            <div id="transparent"
+                class="w-full absolute -bottom-70px h-268px -mt-10px bg-transparent bg-[length:100%_100%] bg-gradient-to-t from-bodyBg to-transparent"></div>
             <div class="container absolute top-70px flex justify-between items-center h-full px-50px 1100px:px-24px 
             950px:h-auto 375px:px-15px">
                 <div class="flex flex-col">
@@ -176,9 +180,8 @@
                 </div>
             </div>
         </section>
-        <div
-            class="container px-50px 1100px:px-24px 375px:px-15px overflow-x-hidden 950px:mt-30px 950px:mb-0px">
-            <div id="otuz" class="card mb-40px 950px:overflow-x-auto z-50">
+        <div class="container px-50px 1100px:px-24px 375px:px-15px overflow-x-hidden 950px:mt-30px 950px:mb-0px">
+            <div class="card mb-40px 950px:overflow-x-auto z-50 -mt-10px">
                 <div class="header flex">
                     <p class="text-white my-10px text-lg font-medium 950px:text-base z-50">Berk, izlemeye devam et</p>
                 </div>
@@ -204,8 +207,7 @@
 
                 </div>
                 <div class="imgs flex items-center relative 950px:overflow-x-auto">
-                    <div
-                        class="caret caret-left absolute left-0px bg-bodyBg opacity-75 p-5px duration-500 hidden z-50">
+                    <div class="caret caret-left absolute left-0px bg-bodyBg opacity-75 p-5px duration-500 hidden z-50">
                         <span class="material-symbols-outlined text-9xl text-white z-50 cursor-pointer">
                             chevron_left
                         </span>
@@ -339,12 +341,13 @@
                     zIndex: {
                         '100': '100',
                     }
+
                 },
                 screens: {
                     '1440px': { 'max': '1440px' },
                     '1210px': { 'max': '1210px' },
                     '1100px': { 'max': '1100px' },
-                    '950px': { 'max': '950px' },
+                    '950px': { 'max': '1000px' },
                     '768px': { 'max': '768px' },
                     '635px': { 'max': '635px' },
                     '425px': { 'max': '425px' },
@@ -366,12 +369,14 @@
                     '50px': '50px',
                     '60px': '60px',
                     '70px': '70px',
+                    '71px': '71px',
                     '47px': '47px',
                     '110px': '110px',
                     '120px': '120px',
                     '140px': '140px',
                     '190px': '190px',
                     '220px': '220px',
+                    '268px': '268px',
                 }
             }
         }
