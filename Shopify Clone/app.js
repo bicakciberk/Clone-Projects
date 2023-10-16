@@ -23,3 +23,24 @@ function accordion() {
 }
 
 accordion();
+
+function topHeader() {
+  let isHeaderHidden = false;
+  const topHeader = document.querySelector("#topHeader");
+  const closeBtn = document.querySelector("#closeBtn");
+
+  window.addEventListener("scroll", function () {
+    if (!isHeaderHidden && this.window.scrollY > 0) {
+      topHeader.classList.remove("hidden");
+    } else {
+      topHeader.classList.add("hidden");
+    }
+  });
+
+  closeBtn.addEventListener("click", function () {
+    topHeader.classList.add("hidden");
+    isHeaderHidden = true;
+  });
+}
+
+window.addEventListener("load", topHeader);

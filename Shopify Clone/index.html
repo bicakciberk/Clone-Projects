@@ -17,6 +17,10 @@
         border-top: 1px solid #c1ccc7;
         border-bottom: 1px solid #c1ccc7;
       }
+
+      #topHeader {
+        border-bottom: 1px solid #c1ccc7;
+      }
       .mainGradientBg {
         background: radial-gradient(
             circle at 0 0,
@@ -29,11 +33,6 @@
             rgba(121, 223, 255, 0) 70%
           ),
           radial-gradient(circle at 95% 0, #d0f224 0, rgba(95, 213, 182, 0) 20%);
-      }
-
-      .dream {
-        background: #054a49
-          radial-gradient(circle at -48% 130%, #d0f224aa 24%, #054a49 45%);
       }
       .acBtnBlack {
         display: none;
@@ -51,7 +50,7 @@
   </head>
   <body class="bg-main">
     <section
-      class="flex flex-col items-center mainGradientBg relative px-50px pb-64px 730px:px-20px"
+      class="flex flex-col items-center mainGradientBg relative px-50px 730px:px-20px pb-64px"
       id="hero"
     >
       <svg
@@ -155,9 +154,9 @@
     </section>
 
     <div
-      class="container mx-auto flex flex-col px-50px items-center 730px:px-20px 730px:items-start"
+      class="container w-full mx-auto flex flex-col px-50px items-center 730px:px-20px 730px:items-start max-w-1420px"
     >
-      <section class="flex items-center flex-col">
+      <section class="flex items-center flex-col w-full">
         <img
           class="w-290px h-216px mt-10px"
           alt="An illustration of a laptop with an open lid, with a shopping cart and mouse arrow depicted on the screen. There is a green shop awning across the top of the laptop screen, to suggest that users can do their small business shopping right from their computer."
@@ -167,7 +166,9 @@
           "
           loading="lazy"
         />
-        <div class="cards w-full flex justify-between mt-10px 1050px:flex-col">
+        <div
+          class="cards w-full flex items-start justify-between mt-10px 1050px:flex-col"
+        >
           <div class="card1 flex-col mx-10px 1050px:my-10px">
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/free-trial/icons/template2-b5046e879e5b48d1cd95d1bdb18920d52309a1a17ce8255d3b5d9c295f69236c.svg"
@@ -186,7 +187,7 @@
             </p>
           </div>
 
-          <div class="card1 flex-col m-10px 1050px:my-10px">
+          <div class="card1 flex-col mx-10px 1050px:my-10px">
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/free-trial/icons/box2-effe369359f293039eecbac0bf07622de2435381bdfb36be0b54fc918bd6398f.svg"
               alt="Shipping Box"
@@ -324,7 +325,7 @@
     </div>
 
     <section
-      class="dream flex flex-col items-center justify-center text-white py-64px relative px-50px 730px:px-20px"
+      class="dream bg-dream flex flex-col items-center justify-center text-white py-64px relative px-50px 730px:px-20px"
     >
       <h1
         class="text-5xl my-10px max-w-768px text-center font-semibold 1050px:text-4xl"
@@ -596,6 +597,54 @@
       </div>
     </section>
 
+    <section
+      id="topHeader"
+      class="header bg-white flex justify-between items-center p-10px fixed top-0 right-0 w-screen hidden"
+    >
+      <div class="left"></div>
+      <div class="center flex 540px:flex-col items-center justify-center">
+        <p class="text-base font-bold 540px:text-center">
+          Start your free-trial today
+        </p>
+        <div class="btns 540px:mt-10px">
+          <button
+            class="outline-none bg-black text-white rounded-full hover:bg-btnHover p-10px text-sm ml-40px 540px:ml-0"
+          >
+            Get Started
+          </button>
+          <button
+            class="outline-none bg-white text-black rounded-full p-10px text-sm ml-20px border-2 border-black"
+          >
+            Learn more
+          </button>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="md:top-1/2 md:right-4 md:-translate-y-1/2 h-7 w-7 transition-all hover:scale-105 hover:opacity-80"
+        data-component-name="cancel"
+        id="closeBtn"
+      >
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          aria-label=""
+          role="button"
+          class="text-legacy-gray-90"
+        >
+          <path
+            d="M12.811 1.189L1.19 12.811m0-11.622l11.622 11.622"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
+    </section>
+
     <script>
       tailwind.config = {
         theme: {
@@ -610,6 +659,7 @@
               gray: "#c1ccc7",
             },
             maxWidth: {
+              "1420px": "1420px",
               "1100px": "1100px",
               "1020px": "1020px",
               "900px": "900px",
@@ -641,17 +691,21 @@
               "225px": "225px",
               "290px": "290px",
               "300px": "300px",
+              "380px": "380px",
               "1100px": "1100px",
             },
           },
           backgroundImage: {
             mainCenterBg:
               "linear-gradient(140deg, rgba(104,216,190,1) 0%, rgba(170,236,252,1) 49%, rgba(160,232,176,1) 100%)",
+            dream:
+              "radial-gradient(circle at -48% 130%, #d0f224aa 24%, #054a49 45%)",
           },
           fontFamily: {
             roboto: ["Roboto", "sans-serif"],
           },
           screens: {
+            "1920px": { max: "1920px" },
             "1200px": { max: "1200px" },
             "1050px": { max: "1050px" },
             "730px": { max: "730px" },
