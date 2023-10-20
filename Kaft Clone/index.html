@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 box-border">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-shirts and Creative Designs | KAFT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      media="all"
+      href="https://www.kaft.com/resources-2.00.040/images/favicon.ico"
+    />
+    <link href="https://fonts.cdnfonts.com/css/the-rumor" rel="stylesheet" />
+
+    <style>
+      *{
+        outline: none;
+      }
+      @font-face {
+        font-family: "CustomFont";
+        src: url("rumeur.otf") format("truetype");
+      }
+      body::-webkit-scrollbar {
+        width: 0px;
+      }
+
+      .deneme {
+        z-index: -50;
+      }
+
+      /*optimizasyonlar yapılacak*/
+
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    </style>
+  </head>
+  <body class="relative">
+    <nav class="flex justify-between items-center w-full p-40px fixed z-40">
+      <div class="left flex items-center cursor-pointer">
+        <span class="text-white"
+          ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
+          ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
+          ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i>
+        </span>
+        <p class="ml-20px font-semibold text-white">Menu</p>
+      </div>
+
+      <div class="center cursor-pointer">
+        <a href="#">
+          <img
+            src="https://www.kaft.com/resources-2.00.040/images/logo-light.svg"
+            alt=""
+            width="36px"
+          />
+        </a>
+      </div>
+
+      <div class="right flex items-center">
+        <a href="#" class="text-wasteGray">Login</a>
+        <div
+          class="circle flex flex-col items-center justify-center cursor-pointer bg-white rounded-full w-64px h-64px ml-20px"
+        >
+          <small>0</small>
+          <svg id="icon-cart" class="w-40px" viewBox="0 0 32 32">
+            <path
+              d="M24.878 10.169c-0.001-0.1-0.024-0.195-0.066-0.279l0.002 0.004c-0.084-0.17-0.239-0.294-0.425-0.334l-0.004-0.001-10.167-5.052c-0.081-0.039-0.177-0.062-0.278-0.062s-0.197 0.023-0.282 0.064l0.004-0.002-6.189 2.699c-0.207 0.099-0.35 0.303-0.361 0.541l-0 0.001v13.085c0 0.24 0.138 0.46 0.361 0.564l10.909 5.204c0.005 0 0.005 0 0.011 0.005 0.016 0.004 0.032 0.010 0.048 0.020 0.005 0 0.011 0.005 0.020 0.005l0.048 0.016c0.005 0 0.011 0.004 0.016 0.004 0.016 0.005 0.037 0.005 0.053 0.011h0.016c0.021 0 0.047 0.005 0.068 0.005s0.048 0 0.069-0.005h0.016c0.019-0.001 0.038-0.005 0.055-0.011l-0.001 0c0.004 0 0.010-0.004 0.015-0.004l0.048-0.016c0.005 0 0.011-0.005 0.021-0.005 0.018-0.005 0.034-0.012 0.049-0.021l-0.001 0c0.004 0 0.004 0 0.010-0.005l5.585-2.818c0.213-0.103 0.358-0.316 0.361-0.564v-13.031c-0.011-0.005-0.011-0.011-0.011-0.016zM18.657 12.289l-9.461-4.516 4.518-2.155 9.462 4.515-4.519 2.156zM8.384 8.781l9.636 4.598v11.653l-9.636-4.597v-11.653zM19.293 25.033v-11.653l4.364-2.009v11.653l-4.364 2.009z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+    <div id="fullpage">
+       <div class="section h-screen">
+          <img
+            src="https://www.kaft.com/static/images/content/banner/655.jpg?1696931601000"
+            alt=""
+            class="h-screen w-screen object-cover hero-img absolute deneme"
+          />
+          <div
+            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          >
+            <p class="text-xl">Ruga</p>
+            <h1 class="text-6xl mt-10px">2 New Colors</h1>
+          </div>
+        </div>
+        <div class="section h-screen">
+          <video
+            class="h-screen w-screen object-cover hero-img absolute deneme"
+            poster="https://www.kaft.com/static/images/content/banner/653.webp?1692699909000"
+            autoplay
+          >
+            <source
+              src="https://www.kaft.com/static/images/content/banner/653.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div
+            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          >
+            <p class="text-xl">Fujifilm x Kaft</p>
+            <h1 class="text-6xl mt-10px">ACRO, VELV, PROI</h1>
+          </div>
+        </div>
+        <div class="section h-screen">
+          <img
+            src="https://www.kaft.com/static/images/content/banner/652.jpg?1692098529000"
+            alt=""
+            class="h-screen w-screen object-cover hero-img absolute deneme"
+          />
+          <div
+            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          >
+            <p class="text-xl">Back In</p>
+            <h1 class="text-6xl mt-10px">Stock</h1>
+          </div>
+        </div>
+        <div class="section h-screen">
+          <img
+            src="https://www.kaft.com/static/images/content/banner/650.jpg?1691743618000"
+            alt=""
+            class="h-screen w-screen object-cover hero-img absolute deneme"
+          />
+          <div
+            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          >
+            <p class="text-xl">Making Room For</p>
+            <h1 class="text-6xl mt-10px">New Designs</h1>
+          </div>
+        </div>
+        <div class="section h-screen">
+          <video
+            class="h-screen w-screen object-cover hero-img absolute deneme"
+            poster="https://www.kaft.com/static/images/content/banner/651.webp?1691743484000"
+            autoplay
+          >
+            <source
+              src="https://www.kaft.com/static/images/content/banner/651.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div
+            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          >
+            <p class="text-xl">2023 Designs</p>
+            <h1 class="text-6xl mt-10px">SERIES</h1>
+          </div>
+        </div> 
+      <div class="section h-screen bg-wasteGray z-50">
+        <p class="text-xl text-black z-50 text-center">There are more things to be discovered
+        </p>
+        <swiper-container class="mySwiper">
+      
+          <swiper-slide>Slide 1</swiper-slide>
+          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>Slide 3</swiper-slide>
+          <swiper-slide>Slide 4</swiper-slide>
+          <swiper-slide>Slide 5</swiper-slide>
+          <swiper-slide>Slide 6</swiper-slide>
+          <swiper-slide>Slide 7</swiper-slide>
+          <swiper-slide>Slide 8</swiper-slide>
+          <swiper-slide>Slide 9</swiper-slide>
+        </swiper-container>
+      
+    </div>
+    
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
+      integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new fullpage("#fullpage", {
+        scrollHorizontally: true,
+        licenseKey: 'L26KH-G32P9-HHKDJ-Q3J38-SNLWN',
+        autoScrolling:true,
+
+      });
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gray: "#d9d8cf",
+              black: "#0f0f0f",
+              chacao: "#353532",
+              wasteGray: "#f2f3ee",
+            },
+            spacing: {
+              "5px": "5px",
+              "10px": "10px",
+              "15px": "15px",
+              "20px": "20px",
+              "40px": "40px",
+              "64px": "64px",
+
+              "29px": "29px",
+              "100px": "100px",
+            },
+            maxWidth: {
+              "1/2": "50%",
+            },
+          },
+          screens: {
+            "2xl": { max: "1535px" },
+          },
+          fontFamily: {
+            rumeur: ["CustomFont", "system-ui"],
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  </body>
+</html>
