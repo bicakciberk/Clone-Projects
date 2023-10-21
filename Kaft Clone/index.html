@@ -48,7 +48,6 @@
 
       .swiper-slide {
         text-align: center;
-        font-size: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,17 +78,23 @@
         transform: translateX(-5000px);
         transition: 0.6s;
       }
+
+      #logo {
+        transform: translateX(50%);
+      }
     </style>
   </head>
   <body class="relative selection:bg-red selection:text-white">
-    <nav class="flex justify-between items-center w-full p-40px fixed z-40">
+    <nav
+      class="flex justify-between items-center w-full p-40px fixed z-40 1010px:p-20px"
+    >
       <div class="left flex items-center cursor-pointer" id="menuBtn">
         <span class="text-white"
           ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
           ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
           ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i>
         </span>
-        <p class="ml-20px font-semibold text-white">Menu</p>
+        <p class="ml-20px font-semibold text-white 1010px:hidden">Menu</p>
       </div>
 
       <div class="center cursor-pointer">
@@ -104,12 +109,16 @@
       </div>
 
       <div class="right flex items-center">
-        <a href="#" class="text-wasteGray">Login</a>
+        <a href="#" class="text-wasteGray 1010px:hidden">Login</a>
         <div
-          class="circle flex flex-col items-center justify-center cursor-pointer bg-white rounded-full w-64px h-64px ml-20px"
+          class="circle flex flex-col items-center justify-center cursor-pointer bg-white rounded-full w-64px h-64px ml-20px 1010px:bg-transparent 1010px:text-white"
         >
           <small>0</small>
-          <svg id="icon-cart" class="w-40px" viewBox="0 0 32 32">
+          <svg
+            id="icon-cart"
+            class="w-40px 1010px:fill-white"
+            viewBox="0 0 32 32"
+          >
             <path
               d="M24.878 10.169c-0.001-0.1-0.024-0.195-0.066-0.279l0.002 0.004c-0.084-0.17-0.239-0.294-0.425-0.334l-0.004-0.001-10.167-5.052c-0.081-0.039-0.177-0.062-0.278-0.062s-0.197 0.023-0.282 0.064l0.004-0.002-6.189 2.699c-0.207 0.099-0.35 0.303-0.361 0.541l-0 0.001v13.085c0 0.24 0.138 0.46 0.361 0.564l10.909 5.204c0.005 0 0.005 0 0.011 0.005 0.016 0.004 0.032 0.010 0.048 0.020 0.005 0 0.011 0.005 0.020 0.005l0.048 0.016c0.005 0 0.011 0.004 0.016 0.004 0.016 0.005 0.037 0.005 0.053 0.011h0.016c0.021 0 0.047 0.005 0.068 0.005s0.048 0 0.069-0.005h0.016c0.019-0.001 0.038-0.005 0.055-0.011l-0.001 0c0.004 0 0.010-0.004 0.015-0.004l0.048-0.016c0.005 0 0.011-0.005 0.021-0.005 0.018-0.005 0.034-0.012 0.049-0.021l-0.001 0c0.004 0 0.004 0 0.010-0.005l5.585-2.818c0.213-0.103 0.358-0.316 0.361-0.564v-13.031c-0.011-0.005-0.011-0.011-0.011-0.016zM18.657 12.289l-9.461-4.516 4.518-2.155 9.462 4.515-4.519 2.156zM8.384 8.781l9.636 4.598v11.653l-9.636-4.597v-11.653zM19.293 25.033v-11.653l4.364-2.009v11.653l-4.364 2.009z"
             ></path>
@@ -181,10 +190,10 @@
           class="h-screen w-screen object-cover hero-img absolute deneme"
         />
         <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
         >
-          <p class="text-xl">Ruga</p>
-          <h1 class="text-6xl mt-10px">2 New Colors</h1>
+          <p class="text-xl 1010px:text-base">Ruga</p>
+          <h1 class="text-6xl mt-10px 1010px:text-3xl">2 New Colors</h1>
         </div>
       </div>
       <div class="section h-screen">
@@ -199,10 +208,10 @@
           />
         </video>
         <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
         >
-          <p class="text-xl">Fujifilm x Kaft</p>
-          <h1 class="text-6xl mt-10px">ACRO, VELV, PROI</h1>
+          <p class="text-xl 1010px:text-base">Fujifilm x Kaft</p>
+          <h1 class="text-6xl mt-10px 1010px:text-3xl">ACRO, VELV, PROI</h1>
         </div>
       </div>
       <div class="section h-screen">
@@ -212,10 +221,10 @@
           class="h-screen w-screen object-cover hero-img absolute deneme"
         />
         <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
         >
-          <p class="text-xl">Back In</p>
-          <h1 class="text-6xl mt-10px">Stock</h1>
+          <p class="text-xl 1010px:text-base">Back In</p>
+          <h1 class="text-6xl mt-10px 1010px:text-3xl">Stock</h1>
         </div>
       </div>
       <div class="section h-screen">
@@ -225,10 +234,10 @@
           class="h-screen w-screen object-cover hero-img absolute deneme"
         />
         <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
         >
-          <p class="text-xl">Making Room For</p>
-          <h1 class="text-6xl mt-10px">New Designs</h1>
+          <p class="text-xl 1010px:text-base">Making Room For</p>
+          <h1 class="text-6xl mt-10px 1010px:text-3xl">New Designs</h1>
         </div>
       </div>
       <div class="section h-screen">
@@ -243,15 +252,15 @@
           />
         </video>
         <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
         >
-          <p class="text-xl">2023 Designs</p>
-          <h1 class="text-6xl mt-10px">SERIES</h1>
+          <p class="text-xl 1010px:text-base">2023 Designs</p>
+          <h1 class="text-6xl mt-10px 1010px:text-3xl">SERIES</h1>
         </div>
       </div>
       <div class="section h-screen" id="denemeSection">
         <div class="swiper-container bg-wasteGray">
-          <h1 class="text-xl pb-100px">
+          <h1 class="text-xl pb-100px px-20px">
             There are more things to be discovered
           </h1>
 
@@ -259,7 +268,7 @@
             class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden cursor-pointer relative"
           >
             <div class="cat-title absolute right-2/4">
-              <img class="h-330px" src="#" alt="" />
+              <img class="h-330px 1010px:h-210px" src="#" alt="" />
             </div>
             <div
               class="swiper-wrapper"
@@ -273,7 +282,9 @@
                 aria-label="1 / 9"
               >
                 <div class="border"></div>
-                <p class="text-3xl font-semibold creative">Creative T-shirts</p>
+                <p class="text-3xl font-semibold creative w-full">
+                  Creative T-shirts
+                </p>
                 <div class="border"></div>
               </div>
               <div
@@ -283,7 +294,9 @@
                 aria-label="2 / 9"
               >
                 <div class="border"></div>
-                <p class="text-3xl font-semibold basic">Basic T-shirts</p>
+                <p class="text-3xl font-semibold basic w-full">
+                  Basic T-shirts
+                </p>
                 <div class="border"></div>
               </div>
               <div
@@ -437,6 +450,7 @@
               "29px": "29px",
               "100px": "100px",
               "95px": "95px",
+              "210px": "210px",
               "300px": "300px",
               "330px": "330px",
             },
@@ -445,7 +459,7 @@
             },
           },
           screens: {
-            "2xl": { max: "1535px" },
+            "1010px": { max: "1010px" },
           },
           fontFamily: {
             rumeur: ["CustomFont", "system-ui"],
