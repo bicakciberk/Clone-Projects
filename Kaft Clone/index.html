@@ -37,6 +37,7 @@
 
       .swiper {
         width: 100%;
+        height: 330px;
       }
 
       .swiper-slide {
@@ -62,6 +63,10 @@
         background-color: black;
         margin: 0px 20px;
       }
+
+      .cat-title {
+        transform: translateX(50%);
+      }
     </style>
   </head>
   <body class="relative selection:bg-red selection:text-white">
@@ -78,6 +83,7 @@
       <div class="center cursor-pointer">
         <a href="#">
           <img
+            id="logo"
             src="https://www.kaft.com/resources-2.00.040/images/logo-light.svg"
             alt=""
             width="36px"
@@ -175,15 +181,18 @@
           <h1 class="text-6xl mt-10px">SERIES</h1>
         </div>
       </div>
-      <div class="section h-screen">
+      <div class="section h-screen" id="denemeSection">
         <div class="swiper-container bg-wasteGray">
           <h1 class="text-xl pb-100px">
             There are more things to be discovered
           </h1>
 
           <div
-            class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden cursor-pointer"
+            class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden cursor-pointer relative"
           >
+            <div class="cat-title absolute right-2/4">
+              <img class="h-330px" src="#" alt="" />
+            </div>
             <div
               class="swiper-wrapper"
               id="swiper-wrapper-1025c07f277a3ff61"
@@ -196,7 +205,7 @@
                 aria-label="1 / 9"
               >
                 <div class="border"></div>
-                <p class="text-3xl font-semibold">Creative T-shirts</p>
+                <p class="text-3xl font-semibold creative">Creative T-shirts</p>
                 <div class="border"></div>
               </div>
               <div
@@ -206,7 +215,7 @@
                 aria-label="2 / 9"
               >
                 <div class="border"></div>
-                <p class="text-3xl font-semibold">Basic T-shirts</p>
+                <p class="text-3xl font-semibold basic">Basic T-shirts</p>
                 <div class="border"></div>
               </div>
               <div
@@ -217,7 +226,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Tanks</p>
+                <p class="text-3xl font-semibold tanks">Tanks</p>
                 <div class="border"></div>
               </div>
               <div
@@ -228,7 +237,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Sweatshirts</p>
+                <p class="text-3xl font-semibold sweatshirts">Sweatshirts</p>
                 <div class="border"></div>
               </div>
               <div
@@ -239,7 +248,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Hoodies</p>
+                <p class="text-3xl font-semibold hoodies">Hoodies</p>
 
                 <div class="border"></div>
               </div>
@@ -251,7 +260,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Beanies</p>
+                <p class="text-3xl font-semibold beanies">Beanies</p>
                 <div class="border"></div>
               </div>
               <div
@@ -262,7 +271,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Socks</p>
+                <p class="text-3xl font-semibold socks">Socks</p>
                 <div class="border"></div>
               </div>
               <div
@@ -273,7 +282,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Bags</p>
+                <p class="text-3xl font-semibold bags">Bags</p>
                 <div class="border"></div>
               </div>
               <div
@@ -284,7 +293,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Shorts</p>
+                <p class="text-3xl font-semibold shorts">Shorts</p>
                 <div class="border"></div>
               </div>
               <div
@@ -295,7 +304,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Trousers</p>
+                <p class="text-3xl font-semibold trousers">Trousers</p>
                 <div class="border"></div>
               </div>
               <div
@@ -306,7 +315,7 @@
               >
                 <div class="border"></div>
 
-                <p class="text-3xl font-semibold">Jacket</p>
+                <p class="text-3xl font-semibold jacket">Jacket</p>
                 <div class="border"></div>
               </div>
             </div>
@@ -356,6 +365,7 @@
               "29px": "29px",
               "100px": "100px",
               "300px": "300px",
+              "330px": "330px",
             },
             maxWidth: {
               "1/2": "50%",
@@ -375,7 +385,7 @@
         loop: true,
         slidesPerView: 3,
         autoplay: {
-          delay: 10000,
+          delay: 5000,
           disableOnInteraction: false,
         },
       });
