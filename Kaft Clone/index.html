@@ -12,9 +12,13 @@
       href="https://www.kaft.com/resources-2.00.040/images/favicon.ico"
     />
     <link href="https://fonts.cdnfonts.com/css/the-rumor" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <style>
-      *{
+      * {
         outline: none;
       }
       @font-face {
@@ -31,24 +35,36 @@
 
       /*optimizasyonlar yapılacak*/
 
+      .swiper {
+        width: 100%;
+      }
 
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
 
-    swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      .swiper-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .border {
+        height: 1px;
+        width: 100px;
+        background-color: black;
+        margin: 0px 20px;
+      }
     </style>
   </head>
-  <body class="relative">
+  <body class="relative selection:bg-red selection:text-white">
     <nav class="flex justify-between items-center w-full p-40px fixed z-40">
       <div class="left flex items-center cursor-pointer">
         <span class="text-white"
@@ -84,99 +100,225 @@
       </div>
     </nav>
     <div id="fullpage">
-       <div class="section h-screen">
-          <img
-            src="https://www.kaft.com/static/images/content/banner/655.jpg?1696931601000"
-            alt=""
-            class="h-screen w-screen object-cover hero-img absolute deneme"
+      <div class="section h-screen">
+        <img
+          src="https://www.kaft.com/static/images/content/banner/655.jpg?1696931601000"
+          alt=""
+          class="h-screen w-screen object-cover hero-img absolute deneme"
+        />
+        <div
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+        >
+          <p class="text-xl">Ruga</p>
+          <h1 class="text-6xl mt-10px">2 New Colors</h1>
+        </div>
+      </div>
+      <div class="section h-screen">
+        <video
+          class="h-screen w-screen object-cover hero-img absolute deneme"
+          poster="https://www.kaft.com/static/images/content/banner/653.webp?1692699909000"
+          autoplay
+        >
+          <source
+            src="https://www.kaft.com/static/images/content/banner/653.mp4"
+            type="video/mp4"
           />
-          <div
-            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
-          >
-            <p class="text-xl">Ruga</p>
-            <h1 class="text-6xl mt-10px">2 New Colors</h1>
-          </div>
+        </video>
+        <div
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+        >
+          <p class="text-xl">Fujifilm x Kaft</p>
+          <h1 class="text-6xl mt-10px">ACRO, VELV, PROI</h1>
         </div>
-        <div class="section h-screen">
-          <video
-            class="h-screen w-screen object-cover hero-img absolute deneme"
-            poster="https://www.kaft.com/static/images/content/banner/653.webp?1692699909000"
-            autoplay
-          >
-            <source
-              src="https://www.kaft.com/static/images/content/banner/653.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div
-            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
-          >
-            <p class="text-xl">Fujifilm x Kaft</p>
-            <h1 class="text-6xl mt-10px">ACRO, VELV, PROI</h1>
-          </div>
+      </div>
+      <div class="section h-screen">
+        <img
+          src="https://www.kaft.com/static/images/content/banner/652.jpg?1692098529000"
+          alt=""
+          class="h-screen w-screen object-cover hero-img absolute deneme"
+        />
+        <div
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+        >
+          <p class="text-xl">Back In</p>
+          <h1 class="text-6xl mt-10px">Stock</h1>
         </div>
-        <div class="section h-screen">
-          <img
-            src="https://www.kaft.com/static/images/content/banner/652.jpg?1692098529000"
-            alt=""
-            class="h-screen w-screen object-cover hero-img absolute deneme"
+      </div>
+      <div class="section h-screen">
+        <img
+          src="https://www.kaft.com/static/images/content/banner/650.jpg?1691743618000"
+          alt=""
+          class="h-screen w-screen object-cover hero-img absolute deneme"
+        />
+        <div
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+        >
+          <p class="text-xl">Making Room For</p>
+          <h1 class="text-6xl mt-10px">New Designs</h1>
+        </div>
+      </div>
+      <div class="section h-screen">
+        <video
+          class="h-screen w-screen object-cover hero-img absolute deneme"
+          poster="https://www.kaft.com/static/images/content/banner/651.webp?1691743484000"
+          autoplay
+        >
+          <source
+            src="https://www.kaft.com/static/images/content/banner/651.mp4"
+            type="video/mp4"
           />
+        </video>
+        <div
+          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+        >
+          <p class="text-xl">2023 Designs</p>
+          <h1 class="text-6xl mt-10px">SERIES</h1>
+        </div>
+      </div>
+      <div class="section h-screen">
+        <div class="swiper-container bg-wasteGray">
+          <h1 class="text-xl pb-100px">
+            There are more things to be discovered
+          </h1>
+
           <div
-            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
+            class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden cursor-pointer"
           >
-            <p class="text-xl">Back In</p>
-            <h1 class="text-6xl mt-10px">Stock</h1>
+            <div
+              class="swiper-wrapper"
+              id="swiper-wrapper-1025c07f277a3ff61"
+              aria-live="polite"
+            >
+              <div
+                class="swiper-slide swiper-slide-active"
+                style="width: 1075px"
+                role="group"
+                aria-label="1 / 9"
+              >
+                <div class="border"></div>
+                <p class="text-3xl font-semibold">Creative T-shirts</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide swiper-slide-next"
+                style="width: 1075px"
+                role="group"
+                aria-label="2 / 9"
+              >
+                <div class="border"></div>
+                <p class="text-3xl font-semibold">Basic T-shirts</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="width: 1075px"
+                role="group"
+                aria-label="3 / 9"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Tanks</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="width: 1075px"
+                role="group"
+                aria-label="4 / 9"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Sweatshirts</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="width: 1075px"
+                role="group"
+                aria-label="5 / 9"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Hoodies</p>
+
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="width: 1075px"
+                role="group"
+                aria-label="6 / 9"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Beanies</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="width: 1075px"
+                role="group"
+                aria-label="7 / 9"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Socks</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="width: 1075px"
+                role="group"
+                aria-label="8 / 9"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Bags</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="9 / 9"
+                style="width: 1075px"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Shorts</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="9 / 9"
+                style="width: 1075px"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Trousers</p>
+                <div class="border"></div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="9 / 9"
+                style="width: 1075px"
+              >
+                <div class="border"></div>
+
+                <p class="text-3xl font-semibold">Jacket</p>
+                <div class="border"></div>
+              </div>
+            </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></span>
           </div>
         </div>
-        <div class="section h-screen">
-          <img
-            src="https://www.kaft.com/static/images/content/banner/650.jpg?1691743618000"
-            alt=""
-            class="h-screen w-screen object-cover hero-img absolute deneme"
-          />
-          <div
-            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
-          >
-            <p class="text-xl">Making Room For</p>
-            <h1 class="text-6xl mt-10px">New Designs</h1>
-          </div>
-        </div>
-        <div class="section h-screen">
-          <video
-            class="h-screen w-screen object-cover hero-img absolute deneme"
-            poster="https://www.kaft.com/static/images/content/banner/651.webp?1691743484000"
-            autoplay
-          >
-            <source
-              src="https://www.kaft.com/static/images/content/banner/651.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div
-            class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50"
-          >
-            <p class="text-xl">2023 Designs</p>
-            <h1 class="text-6xl mt-10px">SERIES</h1>
-          </div>
-        </div> 
-      <div class="section h-screen bg-wasteGray z-50">
-        <p class="text-xl text-black z-50 text-center">There are more things to be discovered
-        </p>
-        <swiper-container class="mySwiper">
-      
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide>
-          <swiper-slide>Slide 3</swiper-slide>
-          <swiper-slide>Slide 4</swiper-slide>
-          <swiper-slide>Slide 5</swiper-slide>
-          <swiper-slide>Slide 6</swiper-slide>
-          <swiper-slide>Slide 7</swiper-slide>
-          <swiper-slide>Slide 8</swiper-slide>
-          <swiper-slide>Slide 9</swiper-slide>
-        </swiper-container>
-      
+      </div>
     </div>
-    
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
@@ -187,11 +329,11 @@
     <script>
       new fullpage("#fullpage", {
         scrollHorizontally: true,
-        licenseKey: 'L26KH-G32P9-HHKDJ-Q3J38-SNLWN',
-        autoScrolling:true,
-
+        licenseKey: "L26KH-G32P9-HHKDJ-Q3J38-SNLWN",
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -201,6 +343,7 @@
               black: "#0f0f0f",
               chacao: "#353532",
               wasteGray: "#f2f3ee",
+              red: "#ed5e4b",
             },
             spacing: {
               "5px": "5px",
@@ -212,6 +355,7 @@
 
               "29px": "29px",
               "100px": "100px",
+              "300px": "300px",
             },
             maxWidth: {
               "1/2": "50%",
@@ -226,6 +370,16 @@
         },
       };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 3,
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    <script src="app.js"></script>
   </body>
 </html>
