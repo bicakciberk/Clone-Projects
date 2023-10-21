@@ -16,7 +16,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       * {
         outline: none;
@@ -67,11 +73,17 @@
       .cat-title {
         transform: translateX(50%);
       }
+
+      /*sidebar*/
+      .sidebar {
+        transform: translateX(-5000px);
+        transition: 0.6s;
+      }
     </style>
   </head>
   <body class="relative selection:bg-red selection:text-white">
     <nav class="flex justify-between items-center w-full p-40px fixed z-40">
-      <div class="left flex items-center cursor-pointer">
+      <div class="left flex items-center cursor-pointer" id="menuBtn">
         <span class="text-white"
           ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
           ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
@@ -105,6 +117,62 @@
         </div>
       </div>
     </nav>
+    <div
+      class="sidebar flex flex-col absolute left-0 text-chacao w-screen z-40"
+    >
+      <div class="side-main flex">
+        <div class="left bg-white h-screen relative p-40px w-full">
+          <div class="top w-full absolute cursor-pointer" id="closeBtn">
+            <i class="fa-solid fa-x fa-2xl py-27px"></i>
+          </div>
+          <p class="font-rumeur text-3xl mt-75px">Shop</p>
+          <div class="row flex text-lg">
+            <div class="left flex flex-col">
+              <a href="#" class="mt-10px">Creative T-shirts</a>
+              <a href="#" class="mt-10px">Basic T-shirts</a>
+              <a href="#" class="mt-10px">Tanks</a>
+              <a href="#" class="mt-10px">Shorts</a>
+              <a href="#" class="mt-10px">Trousers</a>
+              <a href="#" class="mt-10px">Bags</a>
+              <a href="#" class="mt-10px">Jackets</a>
+              <a href="#" class="mt-10px">Hoodies</a>
+              <a href="#" class="mt-10px">Sweatshirts</a>
+              <a href="#" class="mt-10px">Beanies</a>
+              <a href="#" class="mt-10px">Socks</a>
+            </div>
+            <div class="right flex flex-col text-lg ml-40px">
+              <a href="#" class="mt-10px">Fujifilm x Kaft</a>
+              <a href="#" class="mt-10px">2023 T-shirt series</a>
+              <a href="#" class="mt-10px">Kaft Colors</a>
+              <a href="#" class="mt-10px">Lookbook</a>
+              <a href="#" class="mt-10px">Gift Card</a>
+              <a href="#" class="mt-10px">Tee Machine</a>
+              <a href="#" class="mt-10px">Students Get %20 Off</a>
+            </div>
+          </div>
+        </div>
+        <div class="center bg-wasteGray h-screen p-20px w-full">
+          <p class="font-rumeur text-3xl mt-75px">Info</p>
+          <div class="row flex flex-col text-lg">
+            <a href="#" class="mt-10px">Order Status</a>
+            <a href="#" class="mt-10px">Return and Change</a>
+            <a href="#" class="mt-10px">Points Of Sale</a>
+            <a href="#" class="mt-10px">Help</a>
+            <a href="#" class="mt-10px">Get Contact</a>
+          </div>
+        </div>
+        <div class="right h-screen bg-yellow h-screen p-20px w-full mr-75px">
+          <p class="font-rumeur text-3xl mt-75px">Kaft World</p>
+          <div class="row flex flex-col text-lg">
+            <a href="#" class="mt-10px">Designers</a>
+            <a href="#" class="mt-10px">Joruneys</a>
+            <a href="#" class="mt-10px">Kaftsoul - Photos</a>
+            <a href="#" class="mt-10px">Help</a>
+            <a href="#" class="mt-10px">Join the Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="fullpage">
       <div class="section h-screen">
         <img
@@ -353,14 +421,18 @@
               chacao: "#353532",
               wasteGray: "#f2f3ee",
               red: "#ed5e4b",
+              yellow: "#edc50a",
             },
             spacing: {
               "5px": "5px",
               "10px": "10px",
               "15px": "15px",
               "20px": "20px",
+              "27px": "27px ",
+
               "40px": "40px",
               "64px": "64px",
+              "75px": "75px",
 
               "29px": "29px",
               "100px": "100px",
@@ -368,7 +440,7 @@
               "330px": "330px",
             },
             maxWidth: {
-              "1/2": "50%",
+              "754px": "754px",
             },
           },
           screens: {

@@ -48,3 +48,18 @@ function swiper() {
 setInterval(() => {
   swiper();
 }, 1000);
+
+function sideBar() {
+  const menuBtn = document.querySelector("#menuBtn");
+  const sideMenu = document.querySelector(".sidebar");
+  const closeBtn = document.querySelector("#closeBtn");
+
+  menuBtn.addEventListener("click", function () {
+    sideMenu.style.transform = "translateX(0px)";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    sideMenu.style.transform = "translateX(-5000px)";
+  });
+}
+sideBar();
