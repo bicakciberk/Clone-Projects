@@ -1,7 +1,11 @@
 function swiper() {
   const catTitle = document.querySelector(".cat-title"); //img
-  const swiper = document.querySelector(".swiper-slide-active"); //active slide
+  let swiper = document.querySelector(".swiper-slide-next"); //active slide
   const nav = document.querySelector("nav"); //nav logo
+
+  if (window.innerWidth < 800) {
+    swiper = document.querySelector(".swiper-slide-active");
+  }
   //   console.log(swiper);
 
   //   console.log(catTitle.children[0].src); //img src
