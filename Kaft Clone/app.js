@@ -1,6 +1,6 @@
 function swiper() {
   const catTitle = document.querySelector(".cat-title"); //img
-  const swiper = document.querySelector(".swiper-slide-next"); //active slide
+  const swiper = document.querySelector(".swiper-slide-active"); //active slide
   const nav = document.querySelector("nav"); //nav logo
   //   console.log(swiper);
 
@@ -53,13 +53,54 @@ function sideBar() {
   const menuBtn = document.querySelector("#menuBtn");
   const sideMenu = document.querySelector(".sidebar");
   const closeBtn = document.querySelector("#closeBtn");
+  const fullPage = document.querySelector("#fullpage");
 
   menuBtn.addEventListener("click", function () {
     sideMenu.style.transform = "translateX(0px)";
+    fullPage.classList.add("dark");
   });
 
   closeBtn.addEventListener("click", function () {
     sideMenu.style.transform = "translateX(-5000px)";
+    fullPage.classList.remove("dark");
   });
 }
 sideBar();
+
+const nav = document.querySelector("nav");
+const spanI = document.querySelectorAll(".spanI");
+const navLeftSpan = document.querySelector("#nav-left-span");
+const navLogo = document.querySelector("#logo");
+const iconCart = document.querySelector("#icon-cart");
+const rightSmall = document.querySelector("#rightSmall");
+const loginText = document.querySelector("#loginText");
+const menuText = document.querySelector("#menuText");
+
+function perView() {
+  const body = document.querySelector("body");
+  spanI.forEach((spanI) => {
+    if (body.classList.contains("fp-viewing-5")) {
+      navLeftSpan.style.color = "#353532"; //nav > left > span
+      spanI.style.borderColor = "#353532";
+      navLogo.src =
+        "https://www.kaft.com/resources-2.00.040/images/kaft_logo.svg";
+      navLogo.style.height = "30px";
+      iconCart.style.fill = "#353532";
+      rightSmall.style.color = "#353532";
+      loginText.style.color = "#353532";
+      menuText.style.color = "#353532";
+    } else {
+      navLeftSpan.style.color = "#fefefe"; //nav > left > span
+      spanI.style.borderColor = "#fefefe";
+      navLogo.src =
+        "https://www.kaft.com/resources-2.00.040/images/logo-light.svg";
+      loginText.style.color = "#fefefe";
+      menuText.style.color = "#fefefe";
+      navLogo.style.height = "51px";
+    }
+  });
+}
+
+setInterval(() => {
+  perView();
+}, 3000);

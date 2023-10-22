@@ -31,7 +31,8 @@
         font-family: "CustomFont";
         src: url("rumeur.otf") format("truetype");
       }
-      body::-webkit-scrollbar {
+      body::-webkit-scrollbar,
+      .sidebar::-webkit-scrollbar {
         width: 0px;
       }
 
@@ -44,6 +45,12 @@
       .swiper {
         width: 100%;
         height: 330px;
+      }
+
+      @media screen and (max-width: 1010px) {
+        .swiper {
+          height: 210px;
+        }
       }
 
       .swiper-slide {
@@ -82,6 +89,10 @@
       #logo {
         transform: translateX(50%);
       }
+
+      #fullpage.dark {
+        filter: brightness(30%);
+      }
     </style>
   </head>
   <body class="relative selection:bg-red selection:text-white">
@@ -89,31 +100,39 @@
       class="flex justify-between items-center w-full p-40px fixed z-40 1010px:p-20px"
     >
       <div class="left flex items-center cursor-pointer" id="menuBtn">
-        <span class="text-white"
-          ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
-          ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i
-          ><i class="w-29px mb-5px border-2 border-t-white rotate-12 block"></i>
+        <span id="nav-left-span" class="text-white"
+          ><i
+            class="w-29px mb-5px border-2 border-t-white rotate-12 block spanI"
+          ></i
+          ><i
+            class="w-29px mb-5px border-2 border-t-white rotate-12 block spanI"
+          ></i
+          ><i
+            class="w-29px mb-5px border-2 border-t-white rotate-12 block spanI"
+          ></i>
         </span>
-        <p class="ml-20px font-semibold text-white 1010px:hidden">Menu</p>
+        <p class="ml-20px font-semibold text-white 1010px:hidden" id="menuText">
+          Menu
+        </p>
       </div>
 
       <div class="center cursor-pointer">
-        <a href="#">
-          <img
-            id="logo"
-            src="https://www.kaft.com/resources-2.00.040/images/logo-light.svg"
-            alt=""
-            width="36px"
-          />
-        </a>
+        <img
+          id="logo"
+          src="https://www.kaft.com/resources-2.00.040/images/logo-light.svg"
+          alt=""
+          width="36px"
+        />
       </div>
 
       <div class="right flex items-center">
-        <a href="#" class="text-wasteGray 1010px:hidden">Login</a>
-        <div
-          class="circle flex flex-col items-center justify-center cursor-pointer bg-white rounded-full w-64px h-64px ml-20px 1010px:bg-transparent 1010px:text-white"
+        <a href="#" class="text-wasteGray 1010px:hidden" id="loginText"
+          >Login</a
         >
-          <small>0</small>
+        <div
+          class="circle flex flex-col items-center justify-center cursor-pointer bg-white rounded-full w-64px h-64px 1010px:w-32px ml-20px 1010px:bg-transparent 1010px:text-white"
+        >
+          <small id="rightSmall">0</small>
           <svg
             id="icon-cart"
             class="w-40px 1010px:fill-white"
@@ -127,15 +146,24 @@
       </div>
     </nav>
     <div
-      class="sidebar flex flex-col absolute left-0 text-chacao w-screen z-40"
+      class="sidebar flex flex-col absolute left-0 text-chacao w-full z-40 1010px:max-w-330px overflow-y-scroll h-screen"
     >
-      <div class="side-main flex">
-        <div class="left bg-white h-screen relative p-40px w-full">
-          <div class="top w-full absolute cursor-pointer" id="closeBtn">
-            <i class="fa-solid fa-x fa-2xl py-27px"></i>
+      <div class="side-main flex 1010px:flex-col">
+        <div
+          class="left bg-white relative p-40px py-20px 1010px:px-10px w-full 1010px:px-20px"
+        >
+          <div
+            class="top absolute cursor-pointer flex justify-between 1010px:w-290px 1010px:fixed z-50"
+          >
+            <button
+              class="bg-chacao text-white p-10px hidden 1010px:flex 1010px:items-center 1010px:justify-center"
+            >
+              Register/Login
+            </button>
+            <i class="fa-solid fa-x fa-2xl py-27px" id="closeBtn"></i>
           </div>
           <p class="font-rumeur text-3xl mt-75px">Shop</p>
-          <div class="row flex text-lg">
+          <div class="row flex text-lg 1010px:flex-col">
             <div class="left flex flex-col">
               <a href="#" class="mt-10px">Creative T-shirts</a>
               <a href="#" class="mt-10px">Basic T-shirts</a>
@@ -149,7 +177,9 @@
               <a href="#" class="mt-10px">Beanies</a>
               <a href="#" class="mt-10px">Socks</a>
             </div>
-            <div class="right flex flex-col text-lg ml-40px">
+            <div
+              class="right flex flex-col text-lg ml-40px 1010px:ml-0 1010px:mt-40px"
+            >
               <a href="#" class="mt-10px">Fujifilm x Kaft</a>
               <a href="#" class="mt-10px">2023 T-shirt series</a>
               <a href="#" class="mt-10px">Kaft Colors</a>
@@ -160,8 +190,8 @@
             </div>
           </div>
         </div>
-        <div class="center bg-wasteGray h-screen p-20px w-full">
-          <p class="font-rumeur text-3xl mt-95px">Info</p>
+        <div class="center bg-wasteGray px-40px py-20px 1010px:px-20px w-full">
+          <p class="font-rumeur text-3xl mt-75px 1010px:mt-0">Info</p>
           <div class="row flex flex-col text-lg">
             <a href="#" class="mt-10px">Order Status</a>
             <a href="#" class="mt-10px">Return and Change</a>
@@ -170,8 +200,10 @@
             <a href="#" class="mt-10px">Get Contact</a>
           </div>
         </div>
-        <div class="right h-screen bg-yellow h-screen p-20px w-full mr-75px">
-          <p class="font-rumeur text-3xl mt-95px">Kaft World</p>
+        <div
+          class="right h-screen bg-yellow px-40px py-20px 1010px:px-20px w-full mr-75px 1010px:h-full"
+        >
+          <p class="font-rumeur text-3xl mt-75px 1010px:mt-0">Kaft World</p>
           <div class="row flex flex-col text-lg">
             <a href="#" class="mt-10px">Designers</a>
             <a href="#" class="mt-10px">Joruneys</a>
@@ -187,7 +219,7 @@
         <img
           src="https://www.kaft.com/static/images/content/banner/655.jpg?1696931601000"
           alt=""
-          class="h-screen w-screen object-cover hero-img absolute deneme"
+          class="h-screen w-screen object-cover hero-img absolute deneme 1010px:mr-20px"
         />
         <div
           class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
@@ -201,6 +233,8 @@
           class="h-screen w-screen object-cover hero-img absolute deneme"
           poster="https://www.kaft.com/static/images/content/banner/653.webp?1692699909000"
           autoplay
+          muted
+          loop
         >
           <source
             src="https://www.kaft.com/static/images/content/banner/653.mp4"
@@ -245,6 +279,8 @@
           class="h-screen w-screen object-cover hero-img absolute deneme"
           poster="https://www.kaft.com/static/images/content/banner/651.webp?1691743484000"
           autoplay
+          muted
+          loop
         >
           <source
             src="https://www.kaft.com/static/images/content/banner/651.mp4"
@@ -260,7 +296,7 @@
       </div>
       <div class="section h-screen" id="denemeSection">
         <div class="swiper-container bg-wasteGray">
-          <h1 class="text-xl pb-100px px-20px">
+          <h1 class="text-xl pb-100px px-20px text-center">
             There are more things to be discovered
           </h1>
 
@@ -442,7 +478,7 @@
               "15px": "15px",
               "20px": "20px",
               "27px": "27px ",
-
+              "32px": "32px",
               "40px": "40px",
               "64px": "64px",
               "75px": "75px",
@@ -451,11 +487,14 @@
               "100px": "100px",
               "95px": "95px",
               "210px": "210px",
+              "290px": "290px",
               "300px": "300px",
               "330px": "330px",
             },
             maxWidth: {
               "754px": "754px",
+              "667px": "667px",
+              "330px": "330px",
             },
           },
           screens: {
@@ -471,6 +510,14 @@
       var swiper = new Swiper(".mySwiper", {
         loop: true,
         slidesPerView: 3,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          800: {
+            slidesPerView: 3,
+          },
+        },
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,
