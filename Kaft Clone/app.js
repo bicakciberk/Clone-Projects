@@ -20,7 +20,6 @@ function swiper() {
   } else if (swiper.children[1].classList.contains("tanks")) {
     catTitle.children[0].src =
       "https://www.kaft.com/resources-2.00.040/images/product/category/tank.webp";
-    swiper.children[1].style.color = "white";
   } else if (swiper.children[1].classList.contains("sweatshirts")) {
     catTitle.children[0].src =
       "https://www.kaft.com/resources-2.00.040/images/product/category/sweatshirt.webp";
@@ -30,7 +29,6 @@ function swiper() {
   } else if (swiper.children[1].classList.contains("beanies")) {
     catTitle.children[0].src =
       "https://www.kaft.com/resources-2.00.040/images/product/category/beanie.webp";
-    swiper.children[1].style.color = "white";
   } else if (swiper.children[1].classList.contains("socks")) {
     catTitle.children[0].src =
       "https://www.kaft.com/resources-2.00.040/images/product/category/sock.webp";
@@ -108,3 +106,20 @@ function perView() {
 setInterval(() => {
   perView();
 }, 3000);
+
+let isHeaderClose = false;
+
+function headerClose() {
+  const header = document.querySelector("#header");
+  const headerCloseBtn = document.querySelector(".header-closebtn");
+  headerCloseBtn.addEventListener("click", function () {
+    isHeaderClose = true;
+    if (isHeaderClose == true) {
+      header.classList.remove("flex");
+      header.classList.add("hidden");
+      nav.classList.add("py-20px");
+      nav.classList.remove("py-64px");
+    }
+  });
+}
+headerClose();
