@@ -108,7 +108,7 @@
   </head>
   <body class="relative selection:bg-red selection:text-white">
     <nav
-      class="flex justify-between items-center w-full px-40px fixed z-40 py-64px"
+      class="flex justify-between items-center w-full px-40px fixed z-40 py-64px 1010px:px-20px"
     >
       <div class="left flex items-center cursor-pointer" id="menuBtn">
         <span id="nav-left-span" class="text-white"
@@ -203,12 +203,33 @@
         </div>
         <div class="center bg-wasteGray px-40px py-20px 1010px:px-20px w-full">
           <p class="font-rumeur text-3xl mt-75px 1010px:mt-0">Info</p>
-          <div class="row flex flex-col text-lg">
-            <a href="#" class="mt-10px">Order Status</a>
-            <a href="#" class="mt-10px">Return and Change</a>
-            <a href="#" class="mt-10px">Points Of Sale</a>
-            <a href="#" class="mt-10px">Help</a>
-            <a href="#" class="mt-10px">Get Contact</a>
+          <div class="container">
+            <div class="row flex flex-col text-lg">
+              <a href="#" class="mt-10px">Order Status</a>
+              <a href="#" class="mt-10px">Return and Change</a>
+              <a href="#" class="mt-10px">Points Of Sale</a>
+              <a href="#" class="mt-10px">Help</a>
+              <a href="#" class="mt-10px">Get Contact</a>
+            </div>
+            <div class="row flex flex-col text-lg text-paleGray my-40px">
+              <a href="#" class="mt-10px">Live Chat</a>
+              <a href="#" class="mt-10px">info@kaft.com</a>
+              <a href="#" class="mt-10px">+90 212 2673634</a>
+            </div>
+            <div class="row flex text-base my-40px">
+              <div
+                class="left flex items-center justify-center cursor-pointer pr-10px currence"
+              >
+                <p>Türkiye (TL)</p>
+                <i class="fa-solid fa-chevron-down ml-5px text-paleGray"></i>
+              </div>
+              <div
+                class="right pl-10px flex items-center justify-center cursor-pointer border-l-2 border-paleGray currence"
+              >
+                <p>English</p>
+                <i class="fa-solid fa-chevron-down ml-10px text-paleGray"></i>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -225,19 +246,69 @@
         </div>
       </div>
     </div>
+    <div
+      class="currency-dropdown absolute right-0 top-0 h-screen bg-white z-50 p-40px hidden flex 1010px:p-20px 700px:w-full 700px:flex-row-reverse"
+    >
+      <div
+        class="left mr-40px cursor-pointer 1010px:mr-20px 700px:absolute 700px:mt-2px"
+        id="closeCurrency"
+      >
+        <i class="fa-solid fa-x fa-sm"></i>
+      </div>
+      <div class="right">
+        <p class="text-lg">Select Country And Language</p>
+        <p class="my-40px max-w-540px text-sm text-chacao 1010px:my-20px">
+          Your preferences are English and Türkiye (TL). You may update your
+          language and country preferences below or anytime under menu.
+        </p>
+        <div class="form flex flex-col">
+          <div class="select-country flex flex-col">
+            <label>Select Country</label>
+            <select
+              class="bg-wasteGray p-10px"
+              name="currency"
+              id="fetchCurrencySelect"
+            ></select>
+          </div>
+        </div>
+        <div class="form flex flex-col mt-40px 1010px:mt-20px">
+          <div class="select-country flex flex-col">
+            <label>Select Language</label>
+            <select class="bg-wasteGray p-10px" name="languages">
+              <option class="bg-white" value="turkish">Türkçe</option>
+              <option class="bg-white" value="english">English</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttons mt-40px 1010px:mt-20px">
+          <button
+            class="bg-chacao w-full text-white p-10px hover:bg-black duration-500"
+          >
+            Update
+          </button>
+          <button
+            class="bg-wasteGray w-full text-chacao p-10px mt-20px hover:bg-gray duration-500"
+          >
+            Continue Without Update
+          </button>
+        </div>
+      </div>
+    </div>
     <header
       id="header"
       class="fixed top-0 w-full bg-beige z-40 flex justify-between py-10px px-40px 1010px:px-20px"
     >
       <div class="left"></div>
       <div class="center flex items-center">
-        <p class="text-sm">
+        <p class="text-sm 1010px:max-w-330px text-center">
           Fast and free shipping + 100% customer satisfaction and 365 days
           change / return.
         </p>
-        <a href="#" class="underline text-sm ml-10px">More</a>
+        <a href="#" class="underline text-sm ml-10px 1010px:hidden">More</a>
       </div>
-      <div class="right header-closebtn cursor-pointer">
+      <div
+        class="right header-closebtn cursor-pointer flex items-center justify-center pl-10px"
+      >
         <i class="fa-solid fa-x fa-sm"></i>
       </div>
     </header>
@@ -498,8 +569,10 @@
               red: "#ed5e4b",
               yellow: "#edc50a",
               beige: "#d9dbcf",
+              paleGray: "#9a9a98",
             },
             spacing: {
+              "2px": "2px",
               "5px": "5px",
               "10px": "10px",
               "15px": "15px",
@@ -522,11 +595,14 @@
             maxWidth: {
               "754px": "754px",
               "667px": "667px",
+              "540px": "540px",
+
               "330px": "330px",
             },
           },
           screens: {
             "1010px": { max: "1010px" },
+            "700px": { max: "700px" },
           },
           fontFamily: {
             rumeur: ["CustomFont", "system-ui"],

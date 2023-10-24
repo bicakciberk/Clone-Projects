@@ -49,7 +49,7 @@ function swiper() {
 
 setInterval(() => {
   swiper();
-}, 1000);
+}, 900);
 
 function sideBar() {
   const menuBtn = document.querySelector("#menuBtn");
@@ -123,3 +123,35 @@ function headerClose() {
   });
 }
 headerClose();
+
+async function fetchCurrency() {
+  const fetchCurrencySelect = document.querySelector("#fetchCurrencySelect");
+  const closeCurrence = document.querySelector("#closeCurrency");
+  const openCurrence = document.querySelectorAll(".currence");
+
+  const currencyDropDown = document.querySelector(".currency-dropdown");
+
+  const res = await fetch(
+    "https://api.print.io/api/v/5/source/api/countries/?recipeid=f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
+  );
+  const data = await res.json();
+  data.Countries.forEach((orderData) => {
+    const languageElement = document.createElement("option");
+    languageElement.value = orderData.Name;
+    languageElement.textContent = orderData.Name;
+    languageElement.classList.add("bg-white");
+    fetchCurrencySelect.appendChild(languageElement);
+    console.log(languageElement);
+  });
+
+  openCurrence.forEach((currence) => {
+    currence.addEventListener("click", function () {
+      currencyDropDown.classList.remove("hidden");
+    });
+  });
+
+  closeCurrence.addEventListener("click", function () {
+    currencyDropDown.classList.add("hidden");
+  });
+}
+fetchCurrency();
