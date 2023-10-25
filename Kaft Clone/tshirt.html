@@ -108,7 +108,7 @@
   </head>
   <body class="relative bg-wasteGray selection:bg-red selection:text-white">
     <nav
-      class="flex justify-between items-center w-full px-40px fixed z-40 py-20px 1010px:px-20px bg-wasteGray top-0"
+      class="flex justify-between items-center w-full px-40px fixed z-40 py-20px 1010px:px-20px 1010px:py-10px bg-wasteGray top-0"
     >
       <div class="left flex items-center cursor-pointer" id="menuBtn">
         <span id="nav-left-span" class="text-chacao"
@@ -146,12 +146,8 @@
         <div
           class="circle flex flex-col items-center justify-center cursor-pointer bg-white rounded-full w-64px h-64px 1010px:w-32px ml-20px 1010px:bg-transparent 1010px:text-white"
         >
-          <small id="rightSmall">0</small>
-          <svg
-            id="icon-cart"
-            class="w-40px 1010px:fill-white"
-            viewBox="0 0 32 32"
-          >
+          <small id="rightSmall" class="text-chacao">0</small>
+          <svg id="icon-cart" class="w-40px" viewBox="0 0 32 32">
             <path
               d="M24.878 10.169c-0.001-0.1-0.024-0.195-0.066-0.279l0.002 0.004c-0.084-0.17-0.239-0.294-0.425-0.334l-0.004-0.001-10.167-5.052c-0.081-0.039-0.177-0.062-0.278-0.062s-0.197 0.023-0.282 0.064l0.004-0.002-6.189 2.699c-0.207 0.099-0.35 0.303-0.361 0.541l-0 0.001v13.085c0 0.24 0.138 0.46 0.361 0.564l10.909 5.204c0.005 0 0.005 0 0.011 0.005 0.016 0.004 0.032 0.010 0.048 0.020 0.005 0 0.011 0.005 0.020 0.005l0.048 0.016c0.005 0 0.011 0.004 0.016 0.004 0.016 0.005 0.037 0.005 0.053 0.011h0.016c0.021 0 0.047 0.005 0.068 0.005s0.048 0 0.069-0.005h0.016c0.019-0.001 0.038-0.005 0.055-0.011l-0.001 0c0.004 0 0.010-0.004 0.015-0.004l0.048-0.016c0.005 0 0.011-0.005 0.021-0.005 0.018-0.005 0.034-0.012 0.049-0.021l-0.001 0c0.004 0 0.004 0 0.010-0.005l5.585-2.818c0.213-0.103 0.358-0.316 0.361-0.564v-13.031c-0.011-0.005-0.011-0.011-0.011-0.016zM18.657 12.289l-9.461-4.516 4.518-2.155 9.462 4.515-4.519 2.156zM8.384 8.781l9.636 4.598v11.653l-9.636-4.597v-11.653zM19.293 25.033v-11.653l4.364-2.009v11.653l-4.364 2.009z"
             ></path>
@@ -303,7 +299,7 @@
       </div>
     </div>
 
-    <div class="main w-full pt-128px px-40px">
+    <div class="main w-full pt-128px px-40px 780px:px-20px">
       <div class="top flex items-center justify-between">
         <div class="left flex items-center">
           <p
@@ -323,7 +319,7 @@
           </p>
         </div>
         <div class="right flex items-center">
-          <p class="text-paleGray" id="product">151 product</p>
+          <p class="text-paleGray 780px:hidden" id="product">151 product</p>
           <div class="threeBtn ml-20px flex items-center justify-center">
             <div class="btn bg-paleGray h-5px w-5px"></div>
             <div class="btn bg-paleGray h-5px w-5px ml-5px"></div>
@@ -333,12 +329,12 @@
             class="filter cursor-pointer flex items-center justify-center ml-20px"
           >
             <i class="fa-solid fa-filter text-paleGray"></i>
-            <p class="text-cahaco ml-10px">Filter</p>
+            <p class="text-cahaco ml-10px 780px:hidden">Filter</p>
           </div>
         </div>
       </div>
       <div
-        class="tshirts grid grid-cols-4 my-40px"
+        class="tshirts grid grid-cols-4 my-40px 780px:grid-cols-2"
         id="tshirts-container"
       ></div>
     </div>
@@ -536,6 +532,7 @@
           },
           screens: {
             "1010px": { max: "1010px" },
+            "780px": { max: "780px" },
             "700px": { max: "700px" },
           },
           fontFamily: {
