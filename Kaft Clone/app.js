@@ -1,7 +1,6 @@
 function swiper() {
   const catTitle = document.querySelector(".cat-title"); //img
   let swiper = document.querySelector(".swiper-slide-next"); //active slide
-  const nav = document.querySelector("nav"); //nav logo
 
   if (window.innerWidth < 800) {
     swiper = document.querySelector(".swiper-slide-active");
@@ -67,16 +66,17 @@ function sideBar() {
     fullPage.classList.remove("dark");
   });
 }
+
 sideBar();
 
-const nav = document.querySelector("nav");
-const spanI = document.querySelectorAll(".spanI");
-const navLeftSpan = document.querySelector("#nav-left-span");
-const navLogo = document.querySelector("#logo");
-const iconCart = document.querySelector("#icon-cart");
-const rightSmall = document.querySelector("#rightSmall");
-const loginText = document.querySelector("#loginText");
-const menuText = document.querySelector("#menuText");
+const nav = document.querySelector("nav"); //navbar
+const spanI = document.querySelectorAll(".spanI"); //nav > left > span > all i elements (for hamburger logo in navbar)
+const navLeftSpan = document.querySelector("#nav-left-span"); //nav > left > span
+const navLogo = document.querySelector("#logo"); // logo in navbar
+const iconCart = document.querySelector("#icon-cart"); // nav > right > circle > svg (cart svg in navbar)
+const rightSmall = document.querySelector("#rightSmall"); // nav > right > circle > small (counts the number of items in navbar)
+const loginText = document.querySelector("#loginText"); // nav > right > a
+const menuText = document.querySelector("#menuText"); //nav > left > span > p
 
 function perView() {
   const body = document.querySelector("body");
@@ -139,9 +139,11 @@ async function fetchCurrency() {
     const languageElement = document.createElement("option");
     languageElement.value = orderData.Name;
     languageElement.textContent = orderData.Name;
-    languageElement.classList.add("bg-white");
+    languageElement.className = "bg-white";
     fetchCurrencySelect.appendChild(languageElement);
-    console.log(languageElement);
+    if (orderData.Name == "Turkey") {
+      languageElement.selected = true;
+    }
   });
 
   openCurrence.forEach((currence) => {
@@ -155,3 +157,20 @@ async function fetchCurrency() {
   });
 }
 fetchCurrency();
+
+const updateBtn = document.querySelector("#updateBtn");
+
+function updateNavText() {
+  const fetchCurrencySelect = document.querySelector("#fetchCurrencySelect"); //html select element (for currency)
+  const languageSelect = document.querySelector("#languageSelect"); //html select element (for language)
+  const currencyDropDown = document.querySelector(".currency-dropdown"); //when i click currencyContent or languageContent, here is opening right in website
+  const currencyContent = document.querySelector("#currencyContent"); //currency textContent in navbar
+  const languageContent = document.querySelector("#languageContent"); //language textContent in navbar
+
+  currencyDropDown.classList.add("hidden");
+
+  currencyContent.textContent = fetchCurrencySelect.value;
+  languageContent.textContent = languageSelect.value;
+}
+
+updateBtn.addEventListener("click", updateNavText);

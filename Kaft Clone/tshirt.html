@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="m-0 p-0 box-border">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T-shirts and Creative Designs | KAFT</title>
+    <title>T-shirts | KAFT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="shortcut icon"
@@ -101,28 +101,31 @@
         transform: translateX(50%);
       }
 
-      #fullpage.dark {
-        filter: brightness(30%);
-      }
+      /* #tshirts-container:hover .bottom p {
+        color: #00d8c1;
+      } */
     </style>
   </head>
-  <body class="relative selection:bg-red selection:text-white">
+  <body class="relative bg-wasteGray selection:bg-red selection:text-white">
     <nav
-      class="flex justify-between items-center w-full px-40px fixed z-40 py-64px 1010px:px-20px"
+      class="flex justify-between items-center w-full px-40px fixed z-40 py-20px 1010px:px-20px bg-wasteGray top-0"
     >
       <div class="left flex items-center cursor-pointer" id="menuBtn">
-        <span id="nav-left-span" class="text-white"
+        <span id="nav-left-span" class="text-chacao"
           ><i
-            class="w-29px mb-5px border-2 border-t-white rotate-12 block spanI"
+            class="w-29px mb-5px border-2 border-t-chacao rotate-12 block spanI"
           ></i
           ><i
-            class="w-29px mb-5px border-2 border-t-white rotate-12 block spanI"
+            class="w-29px mb-5px border-2 border-t-chacao rotate-12 block spanI"
           ></i
           ><i
-            class="w-29px mb-5px border-2 border-t-white rotate-12 block spanI"
+            class="w-29px mb-5px border-2 border-t-chacao rotate-12 block spanI"
           ></i>
         </span>
-        <p class="ml-20px font-semibold text-white 1010px:hidden" id="menuText">
+        <p
+          class="ml-20px font-semibold text-chacao 1010px:hidden"
+          id="menuText"
+        >
           Menu
         </p>
       </div>
@@ -131,7 +134,7 @@
         <a href="index.html">
           <img
             id="logo"
-            src="https://www.kaft.com/resources-2.00.040/images/logo-light.svg"
+            src="https://www.kaft.com/resources-2.00.040/images/kaft_logo.svg"
             alt=""
             width="36px"
           />
@@ -139,9 +142,7 @@
       </div>
 
       <div class="right flex items-center">
-        <a href="#" class="text-wasteGray 1010px:hidden" id="loginText"
-          >Login</a
-        >
+        <a href="#" class="text-chacao 1010px:hidden" id="loginText">Login</a>
         <div
           class="circle flex flex-col items-center justify-center cursor-pointer bg-white rounded-full w-64px h-64px 1010px:w-32px ml-20px 1010px:bg-transparent 1010px:text-white"
         >
@@ -159,7 +160,7 @@
       </div>
     </nav>
     <div
-      class="sidebar flex flex-col fixed left-0 text-chacao w-full z-50 1010px:max-w-330px overflow-y-scroll h-screen"
+      class="sidebar fixed flex flex-col text-chacao w-full z-50 1010px:max-w-330px overflow-y-scroll h-screen"
     >
       <div class="side-main flex 1010px:flex-col">
         <div
@@ -301,269 +302,193 @@
         </div>
       </div>
     </div>
-    <header
-      id="header"
-      class="fixed top-0 w-full bg-beige z-40 flex justify-between py-10px px-40px 1010px:px-20px"
-    >
-      <div class="left"></div>
-      <div class="center flex items-center">
-        <p class="text-sm 1010px:max-w-330px text-center">
-          Fast and free shipping + 100% customer satisfaction and 365 days
-          change / return.
-        </p>
-        <a href="#" class="underline text-sm ml-10px 1010px:hidden">More</a>
-      </div>
-      <div
-        class="right header-closebtn cursor-pointer flex items-center justify-center pl-10px"
-      >
-        <i class="fa-solid fa-x fa-sm"></i>
-      </div>
-    </header>
-    <div id="fullpage">
-      <div class="section h-screen">
-        <img
-          src="https://www.kaft.com/static/images/content/banner/655.jpg?1696931601000"
-          alt=""
-          class="h-screen w-screen object-cover hero-img absolute deneme 1010px:mr-20px"
-        />
-        <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
-        >
-          <p class="text-xl 1010px:text-base">Ruga</p>
-          <h1 class="text-6xl mt-10px 1010px:text-3xl">2 New Colors</h1>
+
+    <div class="main w-full pt-128px px-40px">
+      <div class="top flex items-center justify-between">
+        <div class="left flex items-center">
+          <p
+            class="text-paleGray hover:text-chacao duration-500 cursor-pointer"
+          >
+            All
+          </p>
+          <p
+            class="ml-10px text-paleGray hover:text-chacao duration-500 cursor-pointer"
+          >
+            Relax
+          </p>
+          <p
+            class="ml-10px text-paleGray hover:text-chacao duration-500 cursor-pointer"
+          >
+            Regular
+          </p>
         </div>
-      </div>
-      <div class="section h-screen">
-        <video
-          class="h-screen w-screen object-cover hero-img absolute deneme"
-          poster="https://www.kaft.com/static/images/content/banner/653.webp?1692699909000"
-          autoplay
-          muted
-          loop
-        >
-          <source
-            src="https://www.kaft.com/static/images/content/banner/653.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
-        >
-          <p class="text-xl 1010px:text-base">Fujifilm x Kaft</p>
-          <h1 class="text-6xl mt-10px 1010px:text-3xl">ACRO, VELV, PROI</h1>
-        </div>
-      </div>
-      <div class="section h-screen">
-        <img
-          src="https://www.kaft.com/static/images/content/banner/652.jpg?1692098529000"
-          alt=""
-          class="h-screen w-screen object-cover hero-img absolute deneme"
-        />
-        <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
-        >
-          <p class="text-xl 1010px:text-base">Back In</p>
-          <h1 class="text-6xl mt-10px 1010px:text-3xl">Stock</h1>
-        </div>
-      </div>
-      <div class="section h-screen">
-        <img
-          src="https://www.kaft.com/static/images/content/banner/650.jpg?1691743618000"
-          alt=""
-          class="h-screen w-screen object-cover hero-img absolute deneme"
-        />
-        <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
-        >
-          <p class="text-xl 1010px:text-base">Making Room For</p>
-          <h1 class="text-6xl mt-10px 1010px:text-3xl">New Designs</h1>
-        </div>
-      </div>
-      <div class="section h-screen">
-        <video
-          class="h-screen w-screen object-cover hero-img absolute deneme"
-          poster="https://www.kaft.com/static/images/content/banner/651.webp?1691743484000"
-          autoplay
-          muted
-          loop
-        >
-          <source
-            src="https://www.kaft.com/static/images/content/banner/651.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div
-          class="text text-gray h-screen w-full flex flex-col justify-end items-end py-100px px-40px font-rumeur z-50 1010px:justify-end 1010px:items-center 1010px:px-0"
-        >
-          <p class="text-xl 1010px:text-base">2023 Designs</p>
-          <h1 class="text-6xl mt-10px 1010px:text-3xl">SERIES</h1>
-        </div>
-      </div>
-      <div class="section h-screen" id="denemeSection">
-        <div class="swiper-container bg-wasteGray">
-          <h1 class="text-xl pb-100px px-20px text-center relative">
-            There are more things to be discovered
-          </h1>
-          <div class="cat-title absolute">
-            <img class="h-330px 1010px:h-210px" src="#" alt="" />
+        <div class="right flex items-center">
+          <p class="text-paleGray" id="product">151 product</p>
+          <div class="threeBtn ml-20px flex items-center justify-center">
+            <div class="btn bg-paleGray h-5px w-5px"></div>
+            <div class="btn bg-paleGray h-5px w-5px ml-5px"></div>
+            <div class="btn bg-paleGray h-5px w-5px ml-5px"></div>
           </div>
           <div
-            class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden cursor-pointer relative text-wasteGray"
+            class="filter cursor-pointer flex items-center justify-center ml-20px"
+          >
+            <i class="fa-solid fa-filter text-paleGray"></i>
+            <p class="text-cahaco ml-10px">Filter</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tshirts grid grid-cols-4 my-40px"
+        id="tshirts-container"
+      ></div>
+    </div>
+    <div class="section h-screen" id="denemeSection">
+      <div class="swiper-container bg-wasteGray">
+        <h1 class="text-xl pb-100px px-20px text-center relative">
+          There are more things to be discovered
+        </h1>
+        <div class="cat-title absolute">
+          <img class="h-330px 1010px:h-210px" src="#" alt="" />
+        </div>
+        <div
+          class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden cursor-pointer relative text-wasteGray"
+        >
+          <div
+            class="swiper-wrapper"
+            id="swiper-wrapper-1025c07f277a3ff61"
+            aria-live="polite"
           >
             <div
-              class="swiper-wrapper"
-              id="swiper-wrapper-1025c07f277a3ff61"
-              aria-live="polite"
+              class="swiper-slide swiper-slide-active"
+              style="width: 1075px"
+              role="group"
+              aria-label="1 / 9"
             >
-              <div
-                class="swiper-slide swiper-slide-active"
-                style="width: 1075px"
-                role="group"
-                aria-label="1 / 9"
-              >
-                <div class="border"></div>
-                <p class="text-3xl font-semibold creative w-full">
-                  Creative T-shirts
-                </p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide swiper-slide-next"
-                style="width: 1075px"
-                role="group"
-                aria-label="2 / 9"
-              >
-                <div class="border"></div>
-                <p class="text-3xl font-semibold basic w-full">
-                  Basic T-shirts
-                </p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                style="width: 1075px"
-                role="group"
-                aria-label="3 / 9"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold tanks">Tanks</p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                style="width: 1075px"
-                role="group"
-                aria-label="4 / 9"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold sweatshirts">Sweatshirts</p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                style="width: 1075px"
-                role="group"
-                aria-label="5 / 9"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold hoodies">Hoodies</p>
-
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                style="width: 1075px"
-                role="group"
-                aria-label="6 / 9"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold beanies">Beanies</p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                style="width: 1075px"
-                role="group"
-                aria-label="7 / 9"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold socks">Socks</p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                style="width: 1075px"
-                role="group"
-                aria-label="8 / 9"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold bags">Bags</p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="9 / 9"
-                style="width: 1075px"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold shorts">Shorts</p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="9 / 9"
-                style="width: 1075px"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold trousers">Trousers</p>
-                <div class="border"></div>
-              </div>
-              <div
-                class="swiper-slide"
-                role="group"
-                aria-label="9 / 9"
-                style="width: 1075px"
-              >
-                <div class="border"></div>
-
-                <p class="text-3xl font-semibold jacket">Jacket</p>
-                <div class="border"></div>
-              </div>
+              <div class="border"></div>
+              <p class="text-3xl font-semibold creative w-full">
+                Creative T-shirts
+              </p>
+              <div class="border"></div>
             </div>
-            <span
-              class="swiper-notification"
-              aria-live="assertive"
-              aria-atomic="true"
-            ></span>
+            <div
+              class="swiper-slide swiper-slide-next"
+              style="width: 1075px"
+              role="group"
+              aria-label="2 / 9"
+            >
+              <div class="border"></div>
+              <p class="text-3xl font-semibold basic w-full">Basic T-shirts</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="width: 1075px"
+              role="group"
+              aria-label="3 / 9"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold tanks">Tanks</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="width: 1075px"
+              role="group"
+              aria-label="4 / 9"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold sweatshirts">Sweatshirts</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="width: 1075px"
+              role="group"
+              aria-label="5 / 9"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold hoodies">Hoodies</p>
+
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="width: 1075px"
+              role="group"
+              aria-label="6 / 9"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold beanies">Beanies</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="width: 1075px"
+              role="group"
+              aria-label="7 / 9"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold socks">Socks</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="width: 1075px"
+              role="group"
+              aria-label="8 / 9"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold bags">Bags</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="9 / 9"
+              style="width: 1075px"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold shorts">Shorts</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="9 / 9"
+              style="width: 1075px"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold trousers">Trousers</p>
+              <div class="border"></div>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="9 / 9"
+              style="width: 1075px"
+            >
+              <div class="border"></div>
+
+              <p class="text-3xl font-semibold jacket">Jacket</p>
+              <div class="border"></div>
+            </div>
           </div>
+          <span
+            class="swiper-notification"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></span>
         </div>
       </div>
     </div>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
-      integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script>
-      new fullpage("#fullpage", {
-        scrollHorizontally: true,
-        licenseKey: "L26KH-G32P9-HHKDJ-Q3J38-SNLWN",
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
     <script>
       tailwind.config = {
         theme: {
@@ -577,6 +502,7 @@
               yellow: "#edc50a",
               beige: "#d9dbcf",
               paleGray: "#9a9a98",
+              green: "#00d8c1",
             },
             spacing: {
               "2px": "2px",
@@ -594,6 +520,7 @@
               "29px": "29px",
               "100px": "100px",
               "95px": "95px",
+              "128px": "128px",
               "210px": "210px",
               "290px": "290px",
               "300px": "300px",
@@ -617,6 +544,7 @@
         },
       };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         loop: true,
@@ -635,6 +563,6 @@
         },
       });
     </script>
-    <script src="app.js"></script>
+    <script type="module" src="tshirt.js"></script>
   </body>
 </html>
