@@ -1,0 +1,50 @@
+[
+  {
+    "userName": "elonmusk",
+    "name": "Elon Musk",
+    "userImg": "https://pbs.twimg.com/profile_images/1683325380441128960/yRsRRjGO_bigger.jpg",
+    "time": "6h",
+    "description": "",
+    "image": "https://pbs.twimg.com/media/GJgNEWpXUAA8_Iv?format=jpg&name=medium",
+    "commentCount": "5.9K",
+    "repostCount": "25K",
+    "likeCount": "305K",
+    "view": "28M"
+  },
+  {
+    "userName": "Fenerbahce",
+    "name": "Fenerbahçe SK",
+    "userImg": "https://pbs.twimg.com/profile_images/1754973332821176320/NC4wWHdB_bigger.jpg",
+    "time": "2h",
+    "description": "Başkan Vekilimiz Erol Bilecik, 2 Nisan Salı günü Stadımızda yapılacak tarihi Olağanüstü Genel Kurul Toplantısı öncesi @fbtv 'de önemli açıklamalarda bulundu.",
+    "image": "https://pbs.twimg.com/media/GJhOuf2XIAA57P4?format=jpg&name=medium",
+    "commentCount": 88,
+    "repostCount": 216,
+    "likeCount": "4.4K",
+    "view": "123K"
+  },
+  {
+    "userName": "uxdesigncc",
+    "name": "UX Collective",
+    "userImg": "https://pbs.twimg.com/profile_images/982990409453334529/Mrnz3KJ6_bigger.jpg",
+    "time": "5h",
+    "description": "Freelance designer 101: client onboarding",
+    "image": "https://pbs.twimg.com/card_img/1772045826879057920/z2R8J12R?format=jpg&name=medium",
+    "commentCount": 0,
+    "repostCount": 3,
+    "likeCount": 13,
+    "view": "2.3K"
+  },
+  {
+    "userName": "yukostrikesback",
+    "name": "Yüksel Toksöz",
+    "userImg": "https://pbs.twimg.com/profile_images/1687221034255024129/Xh_FURqb_bigger.jpg",
+    "time": "18h",
+    "description": "İleride geleceği söylenen Yeni Ajan Seçim Ekranı",
+    "image": "https://pbs.twimg.com/media/GJdtiIlWYAAcRs0?format=jpg&name=medium",
+    "commentCount": 14,
+    "repostCount": 3,
+    "likeCount": 252,
+    "view": "31K"
+  }
+]
