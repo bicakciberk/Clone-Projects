@@ -48,3 +48,8 @@
 .post {
   border-bottom: 1px solid #181919;
 }
+
+#nav-searchbar:focus {
+  background-color: #000000;
+  border: 1px solid #1d9bf0;
+}

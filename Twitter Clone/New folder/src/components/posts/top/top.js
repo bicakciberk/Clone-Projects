@@ -2,7 +2,7 @@ import Setting from "./setting";
 
 function Top({ active, setActive }) {
   return (
-    <div className="top flex items-center text-[15px] select-none">
+    <div className="top fixed top-0 flex items-center text-[15px] select-none bg-black ">
       <div
         className="py-[12px] w-[264px] hover:bg-[#181919] cursor-pointer text-center duration-100 relative"
         onClick={() => setActive(false)}

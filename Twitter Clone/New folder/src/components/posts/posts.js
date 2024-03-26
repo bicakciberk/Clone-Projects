@@ -12,7 +12,7 @@ function Posts() {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="posts">
+    <div className="posts relative">
       <Top active={active} setActive={setActive}></Top>
       {active ? (
         <Following>

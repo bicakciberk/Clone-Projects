@@ -1,20 +1,20 @@
-import TrendItem from "./trendItem";
-import trendsJSON from "./trends.json";
+import whoToFollowJSON from "./whoToFollow.json";
+import Account from "./account";
 import ShoweMore from "../showeMore";
 
-function trendsForYou() {
+function whoToFollow() {
   return (
     <div className="flex flex-col items-start mt-[20px] bg-[#16181c] py-[15px] rounded-2xl">
       <p className="text-[#e7e9ea] font-bold text-[20px] px-[15px] mb-[15px]">
-        Trends for you
+        Who to follow
       </p>
-      {trendsJSON.map((item) => {
+      {whoToFollowJSON.map((item) => {
         return (
-          <TrendItem
-            category={item.category}
+          <Account
+            userName={item.username}
             name={item.name}
-            posts={item.posts}
-          ></TrendItem>
+            img={item.img}
+          ></Account>
         );
       })}
       <ShoweMore></ShoweMore>
@@ -22,4 +22,4 @@ function trendsForYou() {
   );
 }
 
-export default trendsForYou;
+export default whoToFollow;

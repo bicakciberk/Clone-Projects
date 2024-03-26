@@ -1,7 +1,7 @@
 import React from "react";
 
 function forYou({ children }) {
-  return <div>{children}</div>;
+  return <div className="mt-[47px]">{children}</div>;
 }
 
 export default forYou;

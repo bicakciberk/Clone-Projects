@@ -5,7 +5,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div className="index relative ">
+  <div className="index relative">
     <App />
   </div>
 );

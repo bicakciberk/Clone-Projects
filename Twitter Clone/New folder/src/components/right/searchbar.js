@@ -2,10 +2,11 @@ import SearchbarIcon from "./searchbarIcon";
 
 function searchbar() {
   return (
-    <div className="flex items-center relative">
+    <div className="searchbar flex fixed top-[0px] items-center bg-black py-[5px] w-[325px]">
       <input
         type="text"
-        className="bg-[#202327] p-[12px] pl-[40px] rounded-full placeholder:text-[#71767b] w-full"
+        id="nav-searchbar"
+        className="bg-[#202327] px-[12px] pl-[40px] py-[5px] rounded-full placeholder:text-[#71767b] w-full"
         placeholder="Search"
       />
       <SearchbarIcon></SearchbarIcon>

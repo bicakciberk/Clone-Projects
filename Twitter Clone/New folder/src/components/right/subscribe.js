@@ -1,7 +1,7 @@
 import Button from "../sidebar/button";
 function subscribe() {
   return (
-    <div className="flex flex-col items-start bg-[#16181c] p-[15px] rounded-2xl mt-[20px]">
+    <div className="flex mt-[55px] flex-col items-start bg-[#16181c] p-[15px] rounded-2xl">
       <p className="text-[#e7e9ea] font-bold text-[20px]">
         Subscribe to Premium
       </p>
